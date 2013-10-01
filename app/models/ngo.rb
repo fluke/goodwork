@@ -5,7 +5,7 @@ class Ngo < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-    def active_for_authentication? 
+  def active_for_authentication? 
 	  super && approved? 
 	end 
 

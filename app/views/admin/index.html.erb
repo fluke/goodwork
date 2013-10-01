@@ -1,0 +1,16 @@
+<h1> Listing all NGOS</h1>
+<table>
+	<tr>
+		<th>Id</th><th>Name</th>
+<th>Approved</th></tr>
+<tr><% @ngos.each do |ngo| %>
+	<td><%= ngo.id%></td>
+	<td><%= ngo.name %></td>
+	<td><%= ngo.approved %></td>
+	<td><%= link_to "Approve", admin_approved_path(ngo) %></td>
+	<td><%= link_to "Un approve", admin_unapprove_path(ngo) %></td>
+	</tr>
+	<%end%>
+	</table>
+	
+	<%= render 'logout'%>

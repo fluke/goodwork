@@ -11,7 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131001184219) do
+ActiveRecord::Schema.define(version: 20131001190054) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "administrators", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "administrators", ["email"], name: "index_administrators_on_email", unique: true, using: :btree
+  add_index "administrators", ["reset_password_token"], name: "index_administrators_on_reset_password_token", unique: true, using: :btree
+
+  create_table "donations", force: true do |t|
+    t.string   "name"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "category"
+    t.string   "status"
+    t.integer  "ngo_id"
+    t.string   "ph_no"
+    t.string   "email"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "full_name"
+  end
 
   create_table "ngos", force: true do |t|
     t.string   "email",                  default: "",    null: false
@@ -29,7 +67,9 @@ ActiveRecord::Schema.define(version: 20131001184219) do
     t.string   "name"
     t.string   "longdesc"
     t.string   "shortdesc"
+    t.string   "location"
     t.string   "phone"
+    t.boolean  "admin",                  default: false
     t.boolean  "approved",               default: false, null: false
     t.string   "address1"
     t.string   "address2"
