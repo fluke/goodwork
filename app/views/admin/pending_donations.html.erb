@@ -10,6 +10,7 @@
 <th>Ngo Email</th>
 <th>Category</th>
 <th>Location</th>
+<th>Pending for</th>
 </tr>
 <tr><% @donations.each do |don| %>
 	<td><%= don.id%></td>
@@ -21,6 +22,7 @@
 	<td><%= Ngo.find_by_id(don.ngo_id).email %></td>
 	<td><%= don.category %></td>
 	<td><%= "#{don.address1} #{don.address2}, #{don.city}, #{don.state}"  %></td>
+	<td><%=  time_ago_in_words(don.created_at) %></td>
 	<td><%= link_to "Set Pending", admin_pending_path(don) %></td>
 	<td><%= link_to "Set Done", admin_done_path(don) %></td>
 	</tr>
