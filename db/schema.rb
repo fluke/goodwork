@@ -67,9 +67,7 @@ ActiveRecord::Schema.define(version: 20131001190054) do
     t.string   "name"
     t.string   "longdesc"
     t.string   "shortdesc"
-    t.string   "location"
     t.string   "phone"
-    t.boolean  "admin",                  default: false
     t.boolean  "approved",               default: false, null: false
     t.string   "address1"
     t.string   "address2"
