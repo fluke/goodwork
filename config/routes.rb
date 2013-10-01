@@ -1,10 +1,15 @@
 Goodwork::Application.routes.draw do
 
 
+  resources :categories
+
   devise_for :administrators
   devise_for :ngos
-  root :to => "home#index"
+  root :to => "donation#new"
   get "admin/index" => "admin#index"
+  get "donation/new" => "donation#new"
+  post "donation/create" => "donation#create"
+  get "donation/done" => "donation#done"
   get "admin/unapproved" => "admin#unapproved"
   get "admin/approve/:id" => "admin#approve", as: 'admin_approved'
     get "admin/unapprove/:id" => "admin#unapprove", as: 'admin_unapprove'

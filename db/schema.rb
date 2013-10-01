@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131001190054) do
+ActiveRecord::Schema.define(version: 20131001211754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,12 @@ ActiveRecord::Schema.define(version: 20131001190054) do
   add_index "administrators", ["email"], name: "index_administrators_on_email", unique: true, using: :btree
   add_index "administrators", ["reset_password_token"], name: "index_administrators_on_reset_password_token", unique: true, using: :btree
 
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "donations", force: true do |t|
     t.string   "name"
     t.string   "address1"
@@ -41,7 +47,7 @@ ActiveRecord::Schema.define(version: 20131001190054) do
     t.string   "city"
     t.string   "state"
     t.string   "category"
-    t.string   "status"
+    t.string   "status" , default: "pending"
     t.integer  "ngo_id"
     t.string   "ph_no"
     t.string   "email"
