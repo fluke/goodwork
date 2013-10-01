@@ -37,7 +37,7 @@ class AdminController < ApplicationController
   end
   
   def pending_donations
-  @donations = Donation.order('status DESC')
+  @donations = Donation.order('status,created_at DESC')
   end
   
 end
