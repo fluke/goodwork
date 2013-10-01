@@ -1,9 +1,18 @@
 Goodwork::Application.routes.draw do
 
 
+  devise_for :administrators
   devise_for :ngos
   root :to => "home#index"
-
+  get "admin/index" => "admin#index"
+  get "admin/unapproved" => "admin#unapproved"
+  get "admin/approve/:id" => "admin#approve", as: 'admin_approved'
+    get "admin/unapprove/:id" => "admin#unapprove", as: 'admin_unapprove'
+    
+    get "admin/pending/:id" => "admin#pending", as: 'admin_pending'
+      get "admin/done/:id" => "admin#done", as: 'admin_done'
+      
+    get "admin/pending_donations" =>"admin#pending_donations"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

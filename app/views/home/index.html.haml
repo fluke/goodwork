@@ -1,12 +1,1 @@
-%h1 Ngos
-
-= link_to "Unapproved Ngos", :action => "index"
-|
-= link_to "Ngos awaiting approval", :action => "index", :approved => "false"
-
-%table
-	- @ngos.each do |ngo|
-		%tr
-			%td= ngo.email
-			%td= ngo.approved
-			%td= link_to "Edit", edit_ngo_registration_path(ngo)
+%h1 Home Thingy

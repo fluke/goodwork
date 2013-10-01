@@ -1,0 +1,29 @@
+<h1> Listing all donations, SORTED BY PENDING FIRST</h1>
+<table>
+	<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Status</th>
+<th>User name</th>
+<th>User email</th>
+<th>Ngo</th>
+<th>Ngo Email</th>
+<th>Category</th>
+<th>Location</th>
+</tr>
+<tr><% @donations.each do |don| %>
+	<td><%= don.id%></td>
+	<td><%= don.name %></td>
+	<td><%= don.status %></td>
+	<td><%= don.full_name %></td>
+	<td><%= don.email %></td>
+	<td><%= Ngo.find_by_id(don.ngo_id).name %></td>
+	<td><%= Ngo.find_by_id(don.ngo_id).email %></td>
+	<td><%= don.category %></td>
+	<td><%= "#{don.address1} #{don.address2}, #{don.city}, #{don.state}"  %></td>
+	<td><%= link_to "Set Pending", admin_pending_path(don) %></td>
+	<td><%= link_to "Set Done", admin_done_path(don) %></td>
+	</tr>
+	<%end%>
+	</table>
+	<%= render 'logout'%>
