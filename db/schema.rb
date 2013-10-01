@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131001143141) do
+ActiveRecord::Schema.define(version: 20131001184219) do
 
   create_table "ngos", force: true do |t|
     t.string   "email",                  default: "",    null: false
@@ -29,10 +29,13 @@ ActiveRecord::Schema.define(version: 20131001143141) do
     t.string   "name"
     t.string   "longdesc"
     t.string   "shortdesc"
-    t.string   "location"
     t.string   "phone"
-    t.boolean  "admin",                  default: false
     t.boolean  "approved",               default: false, null: false
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.boolean  "inactive"
   end
 
   add_index "ngos", ["approved"], name: "index_ngos_on_approved", using: :btree

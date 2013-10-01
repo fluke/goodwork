@@ -5,7 +5,7 @@ class AdminMailer < ActionMailer::Base
   def new_ngo_waiting_for_approval(ngo)
     @ngo = ngo
     @url  = root_url
-    mail(subject: 'Thank you for applying, we\'ll get back to you soon')
+    mail(subject: 'New NGO registration at Goodwork')
   end
 
 end
