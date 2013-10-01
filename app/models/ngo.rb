@@ -5,6 +5,16 @@ class Ngo < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+
+  validates_presence_of :name, :shortdesc, :email, :city, :state, :address2, :address1, :phone
+  validates_uniqueness_of :name
+  validates_length_of :name, :minimum => 3, :maximum => 100
+  validates_length_of :password, :minimum => 6, :maximum => 18, on: :update, allow_blank: true
+  validates_length_of :password, :minimum => 6, :maximum => 18, on: :create
+  validates_presence_of :password, on: :create
+  validates_length_of :shortdesc, :minimum => 6, :maximum => 141
+
+
   def active_for_authentication? 
 	  super && approved? 
 	end 
