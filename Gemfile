@@ -48,6 +48,7 @@ group :development, :test do
   gem 'simplecov', :require => false, :group => :test
 end
 
+gem 'carmen-rails', '~> 1.0.0', github: 'jim/carmen-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
