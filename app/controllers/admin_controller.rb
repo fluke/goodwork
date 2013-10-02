@@ -13,6 +13,11 @@ class AdminController < ApplicationController
 	  @n.approved = true
 	  @n.save!
 	  redirect_to request.referer
+
+	  if @n.save!
+      NgoMailer.approved(@n).deliver
+    end
+
   end
   
   def unapprove
@@ -20,6 +25,11 @@ class AdminController < ApplicationController
 	  @n.approved = false
 	  @n.save!
 	  redirect_to request.referer
+
+    if @n.save!
+      NgoMailer.unapproved(@n).deliver
+    end
+
   end
   
   def pending

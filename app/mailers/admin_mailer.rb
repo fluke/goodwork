@@ -8,5 +8,12 @@ class AdminMailer < ActionMailer::Base
     mail(subject: 'New NGO registration at Goodwork')
   end
 
+  def pledge_received(ngo, donation)
+  	@ngo = ngo
+  	@donation = donation
+  	@url = root_url
+  	mail(subject: "#{@ngo.name} received a pledge from #{@donation.name}")
+  end
+
 end
 

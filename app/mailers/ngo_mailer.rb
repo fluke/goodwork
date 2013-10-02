@@ -13,8 +13,13 @@ class NgoMailer < ActionMailer::Base
   	mail(to: @ngo.email, subject: 'You\'ve been approved on NGO')
   end
 
+  def unapproved(ngo)
+    @ngo = ngo
+    @url = root_path
+    mail(to: @ngo.email, subject: 'You\'ve been disapproved on NGO')
+  end
+
   def pledge_received(ngo, donation)
-  	@user = random_user
   	@ngo = ngo
   	@donation = donation
   	@url = root_url
