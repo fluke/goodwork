@@ -1,17 +1,19 @@
 <h1> Listing all NGOS</h1>
 <table class="table">
 	<tr>
-		<th>Id</th><th>Name</th><th>Approved</th></tr>
+		<th>Id</th><th>Name</th><th>Approved</th><th>Actions</th><th></th></tr>
 
-	<tr>
+	
 		<% @ngos.each do |ngo| %>
-			<td><%= ngo.id%></td>
-			<td><%= ngo.name %></td>
-			<td><%= ngo.approved %></td>
-			<td><%= link_to "Approve", admin_approved_path(ngo) %></td>
-			<td><%= link_to "Disapprove", admin_unapprove_path(ngo) %></td>
+			<tr>
+				<td><%= ngo.id%></td>
+				<td><%= ngo.name %></td>
+				<td><%= ngo.approved %></td>
+				<td><%= link_to "Approve", admin_approved_path(ngo) %></td>
+				<td><%= link_to "Disapprove", admin_unapprove_path(ngo) %></td>
+			</tr>
 		<%end%>
-	</tr>
+	
 	
 </table>
 	
