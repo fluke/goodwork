@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131001211754) do
+ActiveRecord::Schema.define(version: 20131002110954) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "administrators", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -82,5 +85,10 @@ ActiveRecord::Schema.define(version: 20131001211754) do
   add_index "ngos", ["approved"], name: "index_ngos_on_approved", using: :btree
   add_index "ngos", ["email"], name: "index_ngos_on_email", unique: true, using: :btree
   add_index "ngos", ["reset_password_token"], name: "index_ngos_on_reset_password_token", unique: true, using: :btree
+
+  create_table "ngos_categories", id: false, force: true do |t|
+    t.integer "ngo_id"
+    t.integer "category_id"
+  end
 
 end

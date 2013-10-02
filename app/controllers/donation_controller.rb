@@ -1,6 +1,4 @@
 class DonationController < ApplicationController
-  require 'carmen'
-  include Carmen
   
   def new
      @donation = Donation.new
@@ -13,9 +11,18 @@ class DonationController < ApplicationController
        @donation.state = @donation.state
        @donation.city = @donation.city.capitalize.to_s
        @donation.status = 'pending'
+       ngo_size = Ngo.where(city: @donation.city, state: @donation.state, approved: true).size
+       
+       if ngo_size > 0
+       @donation.ngo_id = Ngo.where(city: @donation.city, state: @donation.state, approved: true ).offset(rand(ngo_size)).first.id
+     else
+       flash[:notice] = "No NGOS found"
+       redirect_to request.referer and return
+     end
+     
        respond_to do |format|
          if @donation.save
-           format.html { redirect_to donation_done_path, notice: 'Sucess!' }
+           format.html { redirect_to donation_done_path, notice: "Sucess! NGO assigned to your item is #{Ngo.find_by_id(@donation.ngo_id).name}, #{Ngo.find_by_id(@donation.ngo_id).city}. They will contact you soon!" }
          else
            format.html { render action: 'new' }
          end

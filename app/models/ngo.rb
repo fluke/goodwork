@@ -6,6 +6,7 @@ class Ngo < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 
+  has_and_belongs_to_many :categories, :join_table => 'ngos_categories'
   validates_presence_of :name, :shortdesc, :email, :city, :state, :address2, :address1, :phone
   validates_uniqueness_of :name
   validates_length_of :name, :minimum => 3, :maximum => 100
