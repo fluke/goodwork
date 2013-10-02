@@ -13,7 +13,9 @@ Goodwork::Application.routes.draw do
   get "admin/unapproved" => "admin#unapproved"
   get "admin/approve/:id" => "admin#approve", as: 'admin_approved'
     get "admin/unapprove/:id" => "admin#unapprove", as: 'admin_unapprove'
-    
+    get ":ngo_id/profile" => "home#profile"
+    get ":ngo_id/edit" => "home#edit"
+    get ":ngo_id/myitems" => "home#myitems"
     get "admin/pending/:id" => "admin#pending", as: 'admin_pending'
       get "admin/done/:id" => "admin#done", as: 'admin_done'
       

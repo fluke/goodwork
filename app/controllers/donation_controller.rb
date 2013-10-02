@@ -11,10 +11,17 @@ class DonationController < ApplicationController
        @donation.state = @donation.state
        @donation.city = @donation.city.capitalize.to_s
        @donation.status = 'pending'
-       ngo_size = Ngo.where(city: @donation.city, state: @donation.state, approved: true).size
+       @ngo_list = Ngo.where(city: @donation.city, state: @donation.state, approved: true)
+       @final_ngo_list = []
+       @ngo_list.each do |ng|
+         if ng.categories.include?(Category.find_by_id(@donation.category))
+           @final_ngo_list << ng
+         end
+       end
        
+       ngo_size = @final_ngo_list.size
        if ngo_size > 0
-       @donation.ngo_id = Ngo.where(city: @donation.city, state: @donation.state, approved: true ).offset(rand(ngo_size)).first.id
+       @donation.ngo_id = @final_ngo_list.sample.id
      else
        flash[:notice] = "No NGOS found"
        redirect_to request.referer and return

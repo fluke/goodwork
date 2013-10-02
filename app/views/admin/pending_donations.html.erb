@@ -18,9 +18,11 @@
 	<td><%= don.status %></td>
 	<td><%= don.full_name %></td>
 	<td><%= don.email %></td>
+	<%if don.ngo_id%>
 	<td><%= Ngo.find_by_id(don.ngo_id).name %></td>
-	<td><%= Ngo.find_by_id(don.ngo_id).email %></td>
-	<td><%= don.category %></td>
+	<td><%= Ngo.find_by_id(don.ngo_id).email%></td>
+	<%end%>
+	<td><%= Category.find(don.category).name %></td>
 	<td><%= "#{don.address1} #{don.address2}, #{don.city}, #{don.state}"  %></td>
 	<td><%=  time_ago_in_words(don.created_at) %></td>
 	<td><%= link_to "Set Pending", admin_pending_path(don) %></td>

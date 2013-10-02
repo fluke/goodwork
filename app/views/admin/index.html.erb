@@ -1,25 +1,21 @@
 <h1> Listing all NGOS</h1>
 <table class="table">
 	<tr>
-		<th>Id</th><th>Name</th><th>Approved</th><th>Actions</th><th></th></tr>
+		<th>Id</th><th>Name</th><th>Approved</th><th>Categories</th><th>Location</th><th>Actions</th><th></th></tr>
 
 	
 		<% @ngos.each do |ngo| %>
-<<<<<<< HEAD
-		<tr>
-			<td><%= ngo.id%></td>
-			<td><%= ngo.name %></td>
-			<td><%= ngo.approved %></td>
-			<td><%= link_to "Approve", admin_approved_path(ngo) %></td>
-			<td><%= link_to "Disapprove", admin_unapprove_path(ngo) %></td>
-=======
 			<tr>
 				<td><%= ngo.id%></td>
 				<td><%= ngo.name %></td>
 				<td><%= ngo.approved %></td>
+				<td><% ngo.categories.each do |ng|%>
+					<%=ng.name%> 
+					<%end%>
+					</td>
+			    <td><%= "#{ngo.city}, #{ngo.state}"%></td>
 				<td><%= link_to "Approve", admin_approved_path(ngo) %></td>
 				<td><%= link_to "Disapprove", admin_unapprove_path(ngo) %></td>
->>>>>>> bb1cab994f57b5a74bd1233ce4b0f0fb673f3f27
 			</tr>
 		<%end%>
 	
