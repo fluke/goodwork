@@ -4,14 +4,16 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to example.com, <%= @ngo.name %></h1>
+    <h1>New NGO applied at Goodwork, <%= @ngo.name %></h1>
     <p>
       You have successfully signed up to example.com,
-      your ngoname is: <%= @ngo.email %>.<br/>
+      your name is: <%= @ngo.name %>.<br/>
     </p>
+    <p>Email: <%= @ngo.email %></p>
+    <p>Phone: <%= @ngo.phone %></p>
     <p>
-      To login to the site, just follow this link: <%= @url %>/login.
+      To login to the site, just follow this link: <%= @url %>admin/login.
     </p>
-    <p>Thanks for joining and have a great day!</p>
+    <p>Do this fast!</p>
   </body>
 </html>
