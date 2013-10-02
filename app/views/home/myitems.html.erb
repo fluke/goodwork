@@ -1,0 +1,29 @@
+<h1><%= @ngo.name%>'s Donations</h1>
+
+<h1> Listing all donations made to you</h1>
+<table>
+	<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Status</th>
+<th>User name</th>
+<th>User email</th>
+<th>Category</th>
+<th>Location</th>
+<th>Sent at</th>
+</tr>
+<tr><% @donations.each do |don| %>
+	<td><%= don.id%></td>
+	<td><%= don.name %></td>
+	<td><%= don.status %></td>
+	<td><%= don.full_name %></td>
+	<td><%= don.email %></td>
+
+	<td><%= Category.find(don.category).name %></td>
+	<td><%= "#{don.address1} #{don.address2}, #{don.city}"  %></td>
+	<td><%=  time_ago_in_words(don.created_at) %></td>
+
+	<td><%= link_to "Set Done", home_done_path(@ngo.id, don) %></td>
+	</tr>
+	<%end%>
+	</table>
