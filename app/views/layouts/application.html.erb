@@ -27,7 +27,7 @@
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
 	    <ul class="nav navbar-nav navbar-right">
 	      <li><a href="#">How it works</a></li>
-	      <li><a href="#">Are you an NGO?</a></li>
+	      <li><%=link_to "Are you an NGO?", home_welcome_path %></li>
 
 	      <% if ngo_signed_in? %>
 

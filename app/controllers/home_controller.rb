@@ -33,4 +33,7 @@ class HomeController < ApplicationController
 	  end
   end
   
+  def welcome
+  end
+  
 end
