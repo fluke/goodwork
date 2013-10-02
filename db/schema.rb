@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20131001211754) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "administrators", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -47,7 +44,7 @@ ActiveRecord::Schema.define(version: 20131001211754) do
     t.string   "city"
     t.string   "state"
     t.string   "category"
-    t.string   "status" , default: "pending"
+    t.string   "status"
     t.integer  "ngo_id"
     t.string   "ph_no"
     t.string   "email"
