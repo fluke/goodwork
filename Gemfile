@@ -43,6 +43,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.13.1'
   gem 'factory_girl_rails'
   gem "capybara"
+  gem "guard"
+  gem "guard-livereload"
+  gem "rack-livereload"
   gem "guard-rspec"
   gem "database_cleaner", :group => :test
   gem 'simplecov', :require => false, :group => :test

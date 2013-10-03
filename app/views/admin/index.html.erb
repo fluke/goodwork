@@ -1,7 +1,7 @@
 <h1> Listing all NGOS</h1>
 <table class="table">
 	<tr>
-		<th>Id</th><th>Name</th><th>Approved</th><th>Categories</th><th>Location</th><th>Actions</th><th></th></tr>
+		<th>Id</th><th>Name</th><th>Approved</th><th>Categories</th><th>Location</th><th>Action</th></tr>
 
 	
 		<% @ngos.each do |ngo| %>
@@ -14,8 +14,11 @@
 					<%end%>
 					</td>
 			    <td><%= "#{ngo.city}, #{ngo.state}"%></td>
-				<td><%= link_to "Approve", admin_approved_path(ngo) %></td>
-				<td><%= link_to "Disapprove", admin_unapprove_path(ngo) %></td>
+			    <% if(!ngo.approved) %>
+					<td><%= link_to "Approve", admin_approved_path(ngo) %></td>
+				<% else %>
+					<td><%= link_to "Disapprove", admin_unapprove_path(ngo) %></td>
+				<% end %>
 			</tr>
 		<%end%>
 	

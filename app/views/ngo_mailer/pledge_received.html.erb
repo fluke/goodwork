@@ -7,6 +7,7 @@
     <h1>The following donation has been requested to be made to your organization:</h1>
     <p>
       Name: <%=@donation.name %><br/>
+      click here to accept it <%= link_to "Here", home_done_path(@ngo.id,@donation.id) %>
     </p>
     <p>
       Contact details of the donor are as follows. <br/>
