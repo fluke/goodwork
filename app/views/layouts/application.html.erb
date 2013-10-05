@@ -6,11 +6,15 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+
+<% if(!current_page?('/')) %>
+	<body>
+<% else %>
+	<body class="atroot">
+<% end %>
 
 
 
-<div class="container">
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	  <!-- Brand and toggle get grouped for better mobile display -->
 	  <div class="navbar-header">
@@ -63,17 +67,22 @@
 	  </div><!-- /.navbar-collapse -->
 	</nav>
 
-	<% if flash[:notice] %>
-		<div class="alert alert-success"><%= notice %>
-		<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a></div>
-	<% end %>
-	<% if flash[:alert] %>
-		<div class="alert alert-info"><%= alert %>
-		<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a></div>
-	<% end %>
+	<% if(!current_page?('/')) %>
 
+		<div class="container">
 
-	<%= yield %>
+		<% if flash[:notice] %>
+			<div class="alert alert-success"><%= notice %>
+			<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a></div>
+		<% end %>
+		<% if flash[:alert] %>
+			<div class="alert alert-info"><%= alert %>
+			<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a></div>
+		<% end %>
+
+    <% end %>
+
+		<%= yield %>
 </div>
 
 </body>

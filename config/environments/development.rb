@@ -10,7 +10,7 @@ Goodwork::Application.configure do
   config.eager_load = false
 
   # Add Rack::LiveReload to the bottom of the middleware stack with the default options.
-  config.middleware.use Rack::LiveReload
+  config.middleware.use Rack::LiveReloadd
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
