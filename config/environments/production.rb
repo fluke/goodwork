@@ -3,7 +3,14 @@ Goodwork::Application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
-
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => 'charitly',
+      :access_key_id => 'AKIAJESFR4VBZDPKD3MA',
+      :secret_access_key => 'Ln8NRzU/ebaLn9J+CHsNn0nZfT+WEoAOSE2mey57'
+    }
+  }
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both thread web servers
   # and those relying on copy on write to perform better.
@@ -71,6 +78,7 @@ Goodwork::Application.configure do
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
+
 
   # Disable automatic flushing of the log to improve performance.
   # config.autoflush_log = false

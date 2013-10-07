@@ -14,10 +14,10 @@
 					<%end%>
 					</td>
 			    <td><%= "#{ngo.city}, #{ngo.state}"%></td>
-			    <% if(!ngo.approved) %>
-					<td><%= link_to "Approve", admin_approved_path(ngo) %></td>
+			    <% unless ngo.approved %>
+					<td><%= link_to "Approve", admin_approved_path(ngo), :confirm => "Are you sure?" %></td>
 				<% else %>
-					<td><%= link_to "Disapprove", admin_unapprove_path(ngo) %></td>
+					<td><%= link_to "Disapprove", admin_unapprove_path(ngo), :confirm => "Are you sure?"  %></td>
 				<% end %>
 			</tr>
 		<%end%>

@@ -38,6 +38,9 @@ end
 gem 'devise', '3.0.0.rc'
 gem "will_paginate", git: 'https://github.com/mislav/will_paginate.git'
 gem 'simple_form'
+gem "paperclip"
+gem 'aws-sdk'
+
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.13.1'
