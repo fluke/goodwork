@@ -6,6 +6,11 @@ class Ngo < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   
   before_save :city_capitalize
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/missing.png"
+  
+  validates_attachment :avatar,
+    :content_type => { :content_type => ['image/jpeg', 'image/jpg', 'image/png'] },
+    :size => { :in => 0..2000.kilobytes }
 
   has_and_belongs_to_many :categories, :join_table => 'ngos_categories'
   

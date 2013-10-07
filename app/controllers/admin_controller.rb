@@ -12,6 +12,7 @@ class AdminController < ApplicationController
 	  @n = Ngo.find_by_id(params[:id])
 	  @n.approved = true
 	  @n.save!
+	  NgoMailer.approved(@n).deliver
 	  redirect_to request.referer
 
 	  if @n.save!
