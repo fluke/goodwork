@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <% if(!current_page?('/')) %>
@@ -83,7 +84,15 @@
     <% end %>
 
 		<%= yield %>
-</div>
+	</div>
+
+	<footer>
+		<div class="persistant-pledge">
+			<label>Pledge an item today, at no cost to anyone.</label>
+			<button type="" class="btn btn-success btn-lg">Pledge</button>
+		</div>
+		<div class="footer-links"></div>
+	</footer>
 
 </body>
 </html>

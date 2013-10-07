@@ -15,6 +15,40 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).ready(function(){  
 
-$(".alert").alert();
+	$(".alert").alert();
+
+	$('.donatebar').click(function (){
+		console.log("Yo");
+	});
+
+	var shifting = false;
+
+	console.log("Yo");
+
+	$('.go-button').click(function() { 
+		console.log("Yo");
+		$value = $(this).parent().find('input').val();
+		$('.item-pledge').html('Pledge your '+$value);
+
+		shifting = true;
+
+		$('.iwantodonate').animate({
+				height: "825px"
+			},
+			3000,
+			'easeOutExpo',
+			function() {
+				console.log('Chaos');
+				shifting = false;
+			});
+
+		$('html,body').animate({
+        scrollTop: $('.iwantodonate').offset().top},
+        'slow');
+
+	});
+
+});
 

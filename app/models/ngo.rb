@@ -33,7 +33,7 @@ class Ngo < ActiveRecord::Base
 	  end 
 	end
 
-	after_create :send_admin_mail
+	#after_create :send_admin_mail
 	def send_admin_mail
 	  AdminMailer.new_ngo_waiting_for_approval(self).deliver
 	end

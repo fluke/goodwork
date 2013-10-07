@@ -30,7 +30,7 @@ class DonationController < ApplicationController
        respond_to do |format|
          if @donation.save
            @ngo = Ngo.find_by_id(@donation.ngo_id)
-           send_mail( @ngo, @donation)
+           #send_mail( @ngo, @donation)
            format.html { redirect_to donation_done_path, notice: "Sucess! NGO assigned to your item is #{Ngo.find_by_id(@donation.ngo_id).name}, #{Ngo.find_by_id(@donation.ngo_id).city}. They will contact you soon!" }
          else
            format.html { render action: 'new' }

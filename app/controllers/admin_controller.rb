@@ -15,7 +15,7 @@ class AdminController < ApplicationController
 	  redirect_to request.referer
 
 	  if @n.save!
-      NgoMailer.approved(@n).deliver
+      #NgoMailer.approved(@n).deliver
     end
 
   end
@@ -27,7 +27,7 @@ class AdminController < ApplicationController
 	  redirect_to request.referer
 
     if @n.save!
-      NgoMailer.unapproved(@n).deliver
+      #NgoMailer.unapproved(@n).deliver
     end
 
   end
