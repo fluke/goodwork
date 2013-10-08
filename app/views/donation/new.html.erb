@@ -4,23 +4,28 @@
   </div>
   <div class="donatebar">
     <label for="">I want to donate a  </label>
-    <input type="text" value="item" class="form-control">
+    <input type="text" value="item" class="form-control pledge-input">
     <div type="" class="btn btn-success go-button">GO</div>
   </div>
 </div>
 
-<div class="iwantodonate">
+
+<% if request.path=='/donation/create' %>
+  <div class="iwantodonate donation-errors">
+<% else %>
+  <div class="iwantodonate">
+<% end %>
   <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <h1 class="item-pledge">Pledge your Item</h1>
-        <%= render "donation/form" %>
-      </div>
-    </div>
+    <h1 class="item-pledge">Pledge your Item</h1>
+    <%= render "donation/form" %>
   </div>
 </div>
 
+
+
 <div class="container">
+
+
 
   <div class="quotation">
     <h2>I remember the days when I had to  track down charities in my area to extend my help to. Then I came across Charitly.</h2>

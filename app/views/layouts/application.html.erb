@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<% if(!current_page?('/')) %>
+<% if !request.path=='/' and !request.path=='/donation/create' %>
 	<body>
 <% else %>
 	<body class="atroot">
@@ -68,7 +68,7 @@
 	  </div><!-- /.navbar-collapse -->
 	</nav>
 
-	<% if(!current_page?('/')) %>
+	<% if !request.path=='/' and !request.path=='/donation/create' %>
 
 		<div class="container">
 
@@ -91,7 +91,7 @@
 			<label>Pledge an item today, at no cost to anyone.</label>
 			<button type="" class="btn btn-success btn-lg">Pledge</button>
 		</div>
-		<div class="footer-links"></div>
+		<div class="footer-links"><%= request.path %></div>
 	</footer>
 
 </body>

@@ -27,6 +27,12 @@ $(document).ready(function(){
 
 	console.log("Yo");
 
+	$('input[type="text"].pledge-input').on('keypress', function (event) {
+	    if(event.which == 13){
+	        $('.go-button').click();
+	    }
+	});
+
 	$('.go-button').click(function() { 
 		console.log("Yo");
 		$value = $(this).parent().find('input').val();

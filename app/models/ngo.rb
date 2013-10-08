@@ -21,6 +21,7 @@ class Ngo < ActiveRecord::Base
   validates_length_of :password, :minimum => 6, :maximum => 18, on: :create
   validates_presence_of :password, on: :create
   validates_length_of :shortdesc, :minimum => 6, :maximum => 141
+  validates_associated :categories
 
   def city_capitalize
     city.capitalize!
