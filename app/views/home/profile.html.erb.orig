@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+<h1><%= @ngo.name %></h1>
+=======
+<h1><%= @ngo.name%></h1>
+<%= image_tag @ngo.avatar.url(:medium) %>
+>>>>>>> c171ae68f19a13cf6efb66bc2c9d0f0075e42927
