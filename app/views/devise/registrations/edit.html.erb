@@ -4,18 +4,18 @@
   <%= f.error_notification %>
 
   <div class="form-group">
-  
-    <%= f.input :email, :required => true, :autofocus => true, input_html: { class: 'form-control' } %>
-    <%= f.input :name, :required => true, input_html: { class: 'form-control' } %>
-    <%= f.input :password, :required => true, input_html: { class: 'form-control' } %>
-    <%= f.input :password_confirmation, :required => true, input_html: { class: 'form-control' } %>
+
+    <%= f.input :email, :required => true, :autofocus => true %>
+    <%= f.input :name, :required => true %>
+    <%= f.input :password, :required => true %>
+    <%= f.input :password_confirmation, :required => true %>
     <%= f.input :avatar, as: :file %>
-    <%= f.input :shortdesc, :required => true, input_html: { class: 'form-control' } %>
-    <%= f.input :longdesc, :as => :text, input_html: { class: 'form-control' } %>
-    <%= f.input :phone, :required => true, input_html: { class: 'form-control' } %>
-    <%= f.input :address1, :required => true, input_html: { class: 'form-control' } %>
-    <%= f.input :address2, :required => true, input_html: { class: 'form-control' } %>
-    <%= f.input :city, :required => true, input_html: { class: 'form-control' } %>
+    <%= f.input :shortdesc, :required => true %>
+    <%= f.input :longdesc, :as => :text %>
+    <%= f.input :phone, :required => true %>
+    <%= f.input :address1, :required => true %>
+    <%= f.input :address2, :required => true %>
+    <%= f.input :city, :required => true %>
     <%= f.input :state, collection: Carmen::Country.coded('IN').subregions %>
     <%= f.association :categories, as: :check_boxes, label: 'What all does your organization accept?' %>
     

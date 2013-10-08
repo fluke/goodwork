@@ -19,6 +19,8 @@ $(document).ready(function(){
 
 	$(".alert").alert();
 
+	$('input[type="checkbox"]').removeClass('form-control');
+
 	$('.donatebar').click(function (){
 		console.log("Yo");
 	});
