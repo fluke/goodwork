@@ -7,8 +7,8 @@ Goodwork::Application.routes.draw do
   devise_for :ngos
   root :to => "donation#new"
   get "admin/index" => "admin#index"
-  get "donation/new" => "donation#new"
-  post "donation/create" => "donation#create"
+  get "donation/new" => "donation#new" 
+  post "donation/create" => "donation#create", as: 'donations'
   get "donation/done" => "donation#done"
   get "admin/unapproved" => "admin#unapproved"
   get "admin/approve/:id" => "admin#approve", as: 'admin_approved'

@@ -7,31 +7,31 @@
   <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a></div>
 <% end %>
 
-<%= simple_form_for @donation,  { url: donation_create_path , :method => 'post'} do |f|%>
+<%= simple_form_for @donation,  { :method => 'post'} do |f|%>
 
   <%= f.error_notification %>
 
-  <%= f.input :name, :required => true, label: 'I want to donate a', :autofocus => true %>
+  <%= f.input :name, :required => true, label: false, placeholder: 'I want to donate a', :autofocus => true %>
 
-  <%= f.input :description, :required => true, label: 'Description of item', as: :text %>
+  <%= f.input :description, :required => true, label: false, placeholder: 'Description of item', as: :text %>
 
-  <%= f.input :full_name, :required => true, label: 'Full name' %>
-
-
-  <%= f.input :address1, :required => true, label: 'Address Line 1' %>
-
-  <%= f.input :address2, :required => true, label: 'Address Line 2' %>
-
-  <%= f.input :state, collection: Carmen::Country.coded('IN').subregions %>
-
-  <%= f.input :city, :required => true, label: 'City' %>
-
-  <%= f.input :category, :required => true, label: 'Category',  collection: Category.all %>
+  <%= f.input :full_name, :required => true, label: false, placeholder: 'Full name' %>
 
 
-  <%= f.input :ph_no, :required => true, label: 'Phone', inout_wrapper_html: { class: 'input-group' } %>
+  <%= f.input :address1, :required => true, label: false, placeholder: 'Address Line 1' %>
 
-  <%= f.input :email, :required => true, label: 'E-mail' %>
+  <%= f.input :address2, :required => true, label: false, placeholder: 'Address Line 2' %>
+
+  <%= f.input :state, collection: Carmen::Country.coded('IN').subregions, label: false %>
+
+  <%= f.input :city, :required => true, label: false, placeholder: 'City' %>
+
+  <%= f.input :category, :required => true, label: false, collection: Category.all, prompt: "Category" %>
+
+
+  <%= f.input :ph_no, :required => true, label: false, placeholder: 'Phone', inout_wrapper_html: { class: 'input-group' } %>
+
+  <%= f.input :email, :required => true, label: false, placeholder: 'E-mail' %>
  
   <div class="form-actions">
     <%= f.button :submit, "Make your pledge!" ,class: "btn-success col-md-offset-2"  %>

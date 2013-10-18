@@ -3,7 +3,7 @@ class DonationController < ApplicationController
   def new
      @donation = Donation.new
      @donation.state = Carmen::Country.coded('IN').subregions.first
-     @donation.category = Category.all.first
+     #@donation.category = Category.all.last
    end
    
    def create
@@ -16,6 +16,7 @@ class DonationController < ApplicationController
            @donation.state = @donation.state
            @donation.city = @donation.city.capitalize.to_s
            @donation.status = 'pending'
+
            @ngo_list = Ngo.where(city: @donation.city, state: @donation.state, approved: true)
            @final_ngo_list = []
            @ngo_list.each do |ng|
