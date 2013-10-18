@@ -4,7 +4,7 @@ SimpleForm.setup do |config|
     b.use :html5
     b.use :placeholder
     b.use :label
-    b.use :input, :wrap_with => { :tag => 'div', :class => 'controls col-xs-5 col-sm-5 col-md-5 col-lg-5' }
+    b.use :input, :wrap_with => { :tag => 'div', :class => 'controls col-xs-8 col-sm-8 col-md-5 col-lg-5' }
     b.use :error, :wrap_with => { :tag => 'span', :class => 'help-block' }
     b.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
   end
@@ -40,7 +40,7 @@ SimpleForm.setup do |config|
   # to learn about the different styles for forms and inputs,
   # buttons and other elements.
   config.form_class = "form-horizontal"
-  config.label_class = "col-xs-2 col-sm-2 col-md-2 col-lg-2 control-label"
+  config.label_class = "col-xs-4 col-sm-4 col-md-2 col-lg-2 control-label"
   config.input_class = "form-control"
   config.default_wrapper = :bootstrap
 end

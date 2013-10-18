@@ -13,7 +13,7 @@
 
   <%= f.input :name, :required => true, label: 'I want to donate a', :autofocus => true %>
 
-  <%= f.input :description, :required => true, label: 'Description of item' %>
+  <%= f.input :description, :required => true, label: 'Description of item', as: :text %>
 
   <%= f.input :full_name, :required => true, label: 'Full name' %>
 
@@ -29,12 +29,12 @@
   <%= f.input :category, :required => true, label: 'Category',  collection: Category.all %>
 
 
-  <%= f.input :ph_no, :required => true, label: 'Phone' %>
+  <%= f.input :ph_no, :required => true, label: 'Phone', inout_wrapper_html: { class: 'input-group' } %>
 
   <%= f.input :email, :required => true, label: 'E-mail' %>
  
   <div class="form-actions">
-    <%= f.button :submit, "Go!" %>
+    <%= f.button :submit, "Make your pledge!" ,class: "btn-success col-md-offset-2"  %>
   </div>
 
 

@@ -15,15 +15,17 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function(){  
+String.prototype.contains = function(it) { return this.indexOf(it) != -1; };
+
+var do_on_load = function() {  
 
 	$(".alert").alert();
 
 	$('input[type="checkbox"]').removeClass('form-control');
 
-	$('.donatebar').click(function (){
-		console.log("Yo");
-	});
+	$('#donation_ph_no').parent().addClass('input-group');
+	$('.input-group').prepend('<span class="input-group-addon">+91</span>');
+
 
 	var shifting = false;
 
@@ -35,20 +37,32 @@ $(document).ready(function(){
 	    }
 	});
 
+	$('.pledge-input').keyup(function(event) {
+		var first = $(this).val().charAt(0);
+		if (first == ' ') $('.vowels').html('I want to donate an');
+		var vowels = 'aAeEiIoOuU';
+		console.log(first);
+		if($.inArray(first, vowels)) {
+			$('.vowels').html('I want to donate a');
+		} else {
+			$('.vowels').html('I want to donate an');
+		}
+	});
+
 	$('.go-button').click(function() { 
 		console.log("Yo");
 		$value = $(this).parent().find('input').val();
 		$('.item-pledge').html('Pledge your '+$value);
-
+		$('.donation_name input').first().val($value);
 		shifting = true;
 
 		$('.iwantodonate').animate({
-				height: "825px"
+				height: "635px"
 			},
 			3000,
 			'easeOutExpo',
 			function() {
-				console.log('Chaos');
+				$(this).addClass('donation-started');
 				shifting = false;
 			});
 
@@ -58,5 +72,8 @@ $(document).ready(function(){
 
 	});
 
-});
 
+}
+
+$(document).ready(do_on_load);
+$(window).bind('page:change', do_on_load);

@@ -19,15 +19,17 @@
 
 
 body { 
-	&.atroot {
-		padding: 0;
-	}
+}
+
+.up-top {
+	padding-top: 20px;
 }
 
 .hero-image {
 	height: 450px;
 	background-position: center;
 	width: 100%;
+	margin-top: -@navbar-height;
 	background-color: black;
 	background-image: url('/assets/drunk.jpg');
 	position: relative;
@@ -35,7 +37,7 @@ body {
 	.hero-text {
 		text-align: center;
 		text-shadow: 1px 1px #ccc;
-		padding: 15% 120px 0;
+		padding: 10% 120px 0;
 		&>h1 {
 			font-size: 60px;
 			line-height: 1
@@ -58,10 +60,13 @@ body {
 	width:100%;
 	overflow: hidden;
 	background-color: black;
-
-	&.donation-errors {
+	
+	h1 {
+		margin-bottom: 35px;
+	}
+	&.donation-errors, &.donation-started  {
 		height: auto!important;
-		padding: 10px 0;
+		padding: 20px 0;
 	}
 }
 
@@ -123,4 +128,9 @@ footer {
 		height: 140px;
 		background: #11100f;
 	}
+}
+
+.help-block {
+	font-family: @font-family-serif;
+	font-style: italic;
 }
