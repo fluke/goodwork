@@ -56,7 +56,7 @@ var do_on_load = function() {
 			shifting = true;
 	
 			$('.iwantodonate').animate({
-					height: "675px"
+					height: "536px"
 				},
 				3000,
 				'easeOutExpo',
