@@ -3,7 +3,7 @@ ActionMailer::Base.smtp_settings = {
   :port                 => 587,
   :domain               => "gmail.com",
   :user_name            => "sizrmailer@gmail.com",
-  :password             => "k1r20i11",
+  :password             => "groupsite619",
   :authentication       => "plain",
   :enable_starttls_auto => true
 }

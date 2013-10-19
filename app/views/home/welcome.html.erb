@@ -3,7 +3,9 @@
     <h1>Making it easier to meet potential donors</h1>
   </div>
   <div class="donatebar">
-    <div type="" class="btn-lg col-md-4 col-md-offset-4 btn-success go-button">Sign Up</div>
+
+    <%=button_to "Sign Up", new_ngo_registration_path, class: 'btn-lg col-md-4 col-md-offset-4 btn-success go-button', :method => :get %>
+
   </div>
 </div>
 
