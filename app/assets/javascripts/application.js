@@ -41,7 +41,6 @@ var do_on_load = function() {
 		var first = $(this).val().charAt(0);
 		if (first == ' ') $('.vowels').html('I want to donate an');
 		var vowels = 'aAeEiIoOuU';
-		console.log(first);
 		if($.inArray(first, vowels)) {
 			$('.vowels').html('I want to donate a');
 		} else {
@@ -50,25 +49,47 @@ var do_on_load = function() {
 	});
 
 	$('.go-button').click(function() { 
-		console.log("Yo");
-		$value = $(this).parent().find('input').val();
-		$('.item-pledge').html('Pledge your '+$value);
-		$('.donation_name input').first().val($value);
-		shifting = true;
+		if(!shifting){
+			$value = $(this).parent().find('input').val();
+			$('.item-pledge').html('Pledge your '+$value);
+			$('.donation_name input').first().val($value);
+			shifting = true;
+	
+			$('.iwantodonate').animate({
+					height: "675px"
+				},
+				3000,
+				'easeOutExpo',
+				function() {
+					$(this).addClass('donation-started');
+					shifting = false;
+				});
+	
+			$('html,body').animate({
+	        scrollTop: $('.iwantodonate').offset().top},
+	        'slow');
+		}
 
-		$('.iwantodonate').animate({
-				height: "635px"
-			},
-			3000,
-			'easeOutExpo',
-			function() {
-				$(this).addClass('donation-started');
-				shifting = false;
-			});
+	});
 
-		$('html,body').animate({
-        scrollTop: $('.iwantodonate').offset().top},
-        'slow');
+	$('.close-pledge').click(function() { 
+		if(!shifting){
+			shifting = true;
+		
+			$('.iwantodonate').removeClass('donation-started');
+			$('.iwantodonate').animate({
+					height: "0"
+				},
+				3000,
+				'easeOutExpo',
+				function() {
+					shifting = false;
+				});
+	
+			$('html,body').animate({
+	        scrollTop: $('.iwantodonate').offset().top},
+	        'slow');
+		}
 
 	});
 
