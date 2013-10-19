@@ -51,7 +51,7 @@ var do_on_load = function() {
 	$('.go-button').click(function() { 
 		if(!shifting){
 			$value = $(this).parent().find('input').val();
-			$('.item-pledge').html('Pledge your '+$value);
+			$('.item-pledge').html('Pledge your <span class="pledged">'+$value+'</span>');
 			$('.donation_name input').first().val($value);
 			shifting = true;
 	
