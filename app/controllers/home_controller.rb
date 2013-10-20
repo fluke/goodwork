@@ -2,11 +2,19 @@ class HomeController < ApplicationController
   before_action :authenticate_ngo!,  only: [:edit, :myitems, :done]
   
   def index
+  end
+
+  def terms
 	end
 
   def about
     
   end
+
+  def privacy
+    
+  end
+
   
   def profile
     @ngo = Ngo.find(params[:id])

@@ -22,6 +22,8 @@ Goodwork::Application.routes.draw do
     get "admin/pending_donations" =>"admin#pending_donations"
     get "welcome" => "home#welcome", as: 'home_welcome'
     get "about" => "home#about", as: 'home_about'
+    get "terms" => "home#terms", as: 'home_terms'
+    get "privacy" => "home#privacy", as: 'home_privacy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
