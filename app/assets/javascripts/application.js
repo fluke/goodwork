@@ -26,6 +26,10 @@ var do_on_load = function() {
 	$('#donation_ph_no').parent().addClass('input-group');
 	$('.input-group').prepend('<span class="input-group-addon">+91</span>');
 
+	var hash = window.location.hash.substring(1);
+	console.log(hash);
+
+	if(hash=='open-form') $('.iwantodonate').addClass('donation-started');
 
 	var shifting = false;
 
