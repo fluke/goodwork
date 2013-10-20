@@ -30,12 +30,16 @@ body, html {
 .hero-image {
 	height: 450px;
 	background-position: center;
+	background-size: cover;
 	width: 100%;
 	margin-top: -@navbar-height;
 	background-color: black;
-	background-image: url('/assets/drunk.jpg');
+	background-image: url('/assets/abhinav.jpg');
 	position: relative;
 	color: white;
+	&.welcome {
+		background-image: url('/assets/drunk.jpg');
+	}
 	.hero-text {
 		text-align: center;
 		text-shadow: 1px 1px #ccc;
