@@ -371,11 +371,18 @@
 
   .navbar-nav {
     > li > a {
-      color: white;//@navbar-default-link-color;
+      color: #f4f4f4;//@navbar-default-link-color;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &.login {
+        color: #222; //@navbar-default-link-hover-color;
+        background-color: rgba(204,204,204,0.5);//@navbar-default-link-hover-bg;
+      }
 
       &:hover,
       &:focus {
-        color: white;//@navbar-default-link-hover-color;
+        color: #f4f4f4;//@navbar-default-link-hover-color;
         background-color: #222;//@navbar-default-link-hover-bg;
       }
     }
