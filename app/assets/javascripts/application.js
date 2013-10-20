@@ -56,9 +56,10 @@ var do_on_load = function() {
 			shifting = true;
 	
 			$('.iwantodonate').animate({
-					height: "536px"
+					height: "506px",
+					padding: "20px 0"
 				},
-				3000,
+				2000,
 				'easeOutExpo',
 				function() {
 					$(this).addClass('donation-started');
@@ -78,9 +79,10 @@ var do_on_load = function() {
 		
 			$('.iwantodonate').removeClass('donation-started');
 			$('.iwantodonate').animate({
-					height: "0"
+					height: "0",
+					padding: "0"
 				},
-				3000,
+				2000,
 				'easeOutExpo',
 				function() {
 					shifting = false;
