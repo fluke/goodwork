@@ -13,7 +13,7 @@
   z-index: @zindex-navbar;
   min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   //margin-bottom: @navbar-margin-bottom;
-  border: 1px solid transparent;
+  //border: 1px solid transparent;
 
   // Prevent floats from breaking the navbar
   .clearfix();
@@ -152,7 +152,7 @@
   padding: @navbar-padding-vertical @navbar-padding-horizontal;
   font-size: @font-size-large;
   line-height: @line-height-computed;
-  margin-top: 1px;
+  //margin-top: 1px;
   position: absolute;
   &:hover,
   &:focus {
@@ -375,8 +375,8 @@
 
       &:hover,
       &:focus {
-        color: darken(white, 10%);//@navbar-default-link-hover-color;
-        background-color: @navbar-default-link-hover-bg;
+        color: white;//@navbar-default-link-hover-color;
+        background-color: #222;//@navbar-default-link-hover-bg;
       }
     }
     > .active > a {
