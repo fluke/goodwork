@@ -7,6 +7,7 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag '/assets/favicon.ico' %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -94,7 +95,20 @@
 				<a type="" href="<%= root_path[1, root_path.length] %>/?#open-form" class="pull-right btn btn-success btn-lg">PLEDGE</a>
 			</div>
 		</div>
-		<div class="footer-links"></div>
+		<div class="footer-links">
+			<div class="col-lg-6">
+				Goodwork is a free platformfor charities to sign up and receive donations in their city. It is developed and maintained by SIZR Studios, a product and web development company.
+			</div>
+			<div class="col-lg-3">
+				Talk to us!<br>
+				<a href="https://twitter.com/GoodworkIN">Tweet us @GoodworkIN</a><br>
+				<a href="https://www.facebook.com/pages/Goodwork/224750914356785">Like us on Facebook</a>
+			</div>
+			<div class="col-lg-3">
+				CREATED WITH LOVE BY
+				<%= image_tag("sizr.png", class:'img-responsive') %>
+			</div>
+		</div>
 	</footer>
 
 </body>
