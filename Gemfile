@@ -42,6 +42,7 @@ gem "will_paginate", git: 'https://github.com/mislav/will_paginate.git'
 gem 'simple_form'
 gem "paperclip"
 gem 'aws-sdk'
+gem 'newrelic_rpm'
 
 
 group :development, :test do
