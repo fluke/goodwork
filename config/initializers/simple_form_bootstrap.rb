@@ -17,8 +17,8 @@ SimpleForm.setup do |config|
       component.use :input
     end
     
-    b.use :error, :wrap_with => { :tag => 'span', :class => 'help-block' }
-    b.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
+    #b.use :error, :wrap_with => { :tag => 'span', :class => 'help-block' }
+    #b.use :hint,  :wrap_with => { :tag => 'p', :class => 'help-block' }
   end
 
   config.wrappers :prepend, tag: 'div', class: "control-group", error_class: 'has-error' do |b|
