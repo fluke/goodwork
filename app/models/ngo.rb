@@ -5,7 +5,10 @@ class Ngo < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   
+  require 'approval_job'
+
   before_save :city_capitalize
+  after_create :send_admin_mail
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/missing.png"
   
   validates_attachment :avatar,
@@ -23,6 +26,8 @@ class Ngo < ActiveRecord::Base
   validates_length_of :shortdesc, :minimum => 6, :maximum => 141
   validates_associated :categories
 
+
+
   def city_capitalize
     city.capitalize!
   end
@@ -39,9 +44,8 @@ class Ngo < ActiveRecord::Base
 	  end 
 	end
 
-	#after_create :send_admin_mail
 	def send_admin_mail
-	  AdminMailer.new_ngo_waiting_for_approval(self).deliver
+    ::NewNGOWaitingForApprovalJob.new.async.perform(self)
 	end
 
 end

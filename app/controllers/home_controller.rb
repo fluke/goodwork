@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   before_action :authenticate_ngo!,  only: [:edit, :myitems, :done]
+
+  require 'approval_job'
   
   def index
   end

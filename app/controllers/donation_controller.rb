@@ -32,7 +32,7 @@ class DonationController < ApplicationController
             flash[:notice] = "No NGOS found"
             redirect_to request.referer and return
            end
-           #send_mail( @ngo, @donation)
+           send_mail( @ngo, @donation)
            format.html { redirect_to donation_done_path, notice: "Success! NGO assigned to your item is #{Ngo.find_by_id(@donation.ngo_id).name}, #{Ngo.find_by_id(@donation.ngo_id).city}. They will contact you soon!" }
          else
            format.html { render action: 'new' }
@@ -43,6 +43,7 @@ class DonationController < ApplicationController
   def done
   end
      
+  require 'pledge_received_job'
      
 private
 
@@ -51,9 +52,9 @@ private
   end
 
   def send_mail(ngo, donation)
-    AdminMailer.pledge_received(@ngo, @donation).deliver
-    NgoMailer.pledge_received(@ngo, @donation).deliver
-    UserMailer.user_pledge_confirmation(@ngo, @donation).deliver
+    # We call our sucker punch job asynchronously using "async"
+      ::PledgeReceivedJob.new.async.perform(ngo, donation)
+      flash[:success] = Sucker Punch!
   end
 
 end
