@@ -1,0 +1,9 @@
+<% @donations.each do |d| %>
+	<% cat = Category.find(d.category).name %>
+	<div id="<%= d.id %>" class="col-lg-3 col-md-3 col-sm-3 card <%= cat.downcase %>">
+		<h3><%= d.name %></h3>
+		<p><%= d.full_name %></p>
+		<p><%= d.email %></p>
+		<p><%= cat %></p>
+	</div>
+<% end %>

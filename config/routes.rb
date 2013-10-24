@@ -3,27 +3,39 @@ Goodwork::Application.routes.draw do
 
   resources :categories
 
+  root :to => "donation#new"
+
   devise_for :administrators
   devise_for :ngos
-  root :to => "donation#new"
-  get "admin/index" => "admin#index"
+
+  #Donation routes
   get "donation/new" => "donation#new" 
   post "donation/create" => "donation#create", as: 'donations'
   get "donation/done" => "donation#done"
+  get "donation/board" => "donation#board"
+  
+  #Admin routes
+  get "admin/index" => "admin#index"
   get "admin/unapproved" => "admin#unapproved"
   get "admin/approve/:id" => "admin#approve", as: 'admin_approved'
-    get "admin/unapprove/:id" => "admin#unapprove", as: 'admin_unapprove'
-    get "profiles/:id" => "home#profile"
-    get "edit/:id" => "home#edit"
-    get "myitems/:id" => "home#myitems"
-    get "admin/pending/:id" => "admin#pending", as: 'admin_pending'
-      get "admin/done/:id" => "admin#done", as: 'admin_done'
-      get "myitems/:id/done/:item_id" => "home#done", as: 'home_done'
-    get "admin/pending_donations" =>"admin#pending_donations"
-    get "welcome" => "home#welcome", as: 'home_welcome'
-    get "about" => "home#about", as: 'home_about'
-    get "terms" => "home#terms", as: 'home_terms'
-    get "privacy" => "home#privacy", as: 'home_privacy'
+  get "admin/unapprove/:id" => "admin#unapprove", as: 'admin_unapprove'
+  get "admin/pending/:id" => "admin#pending", as: 'admin_pending'
+  get "admin/done/:id" => "admin#done", as: 'admin_done'  
+  get "admin/pending_donations" =>"admin#pending_donations"
+
+  #NGO routes
+  get "profiles/:id" => "home#profile"
+  get "edit/:id" => "home#edit"
+  get "myitems/:id" => "home#myitems"
+  get "myitems/:id/done/:item_id" => "home#done", as: 'home_done'
+  
+  #Home routes
+  get "welcome" => "home#welcome", as: 'home_welcome'
+  get "about" => "home#about", as: 'home_about'
+  get "terms" => "home#terms", as: 'home_terms'
+  get "privacy" => "home#privacy", as: 'home_privacy'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

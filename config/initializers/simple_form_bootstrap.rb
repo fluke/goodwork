@@ -12,9 +12,8 @@ SimpleForm.setup do |config|
   config.wrappers :home, :tag => 'div', :error_class => 'has-error' do |b|
     b.use :html5
     b.use :placeholder
-    b.use :label
     b.wrapper :size, tag: :div, :class => 'controls col-xs-12' do |component|
-      component.use :input
+      component.use :input, required: 'true'
     end
     
     #b.use :error, :wrap_with => { :tag => 'span', :class => 'help-block' }

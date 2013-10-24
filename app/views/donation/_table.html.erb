@@ -1,0 +1,30 @@
+<table class="table">
+	<tr>
+	<th>Name</th>
+	<th>User name</th>
+	<th>User email</th>
+	<th>Category</th>
+	<th>Location</th>
+	<% if administrator_signed_in? %>
+		<th>Status</th>
+		<th>Pending for</th>
+		<th>Actions</th>
+		<th></th>
+	<% end %>
+	</tr>
+	<% @donations.each do |don| %>
+		<tr>
+		<td><%= don.name %></td>
+		<td><%= don.full_name %></td>
+		<td><%= don.email %></td>
+		<td><%= Category.find(don.category).name %></td>
+		<td><%= "#{don.address1} #{don.address2}, #{don.city}, #{don.state}"  %></td>
+		<% if administrator_signed_in? %>
+			<td><%= don.status %></td>
+			<td><%=  time_ago_in_words(don.created_at) %></td>
+			<td><%= link_to "Set Pending", admin_pending_path(don), :confirm => "Are you sure?"  %></td>
+			<td><%= link_to "Set Done", admin_done_path(don), :confirm => "Are you sure?"  %></td>
+		<% end %>
+		</tr>
+	<%end%>
+</table>

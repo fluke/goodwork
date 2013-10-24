@@ -43,9 +43,12 @@ gem 'simple_form'
 gem "paperclip"
 gem 'aws-sdk'
 gem 'newrelic_rpm'
+gem 'friendly_id'
 
 
 group :development, :test do
+  gem "better_errors"
+  gem "binding_of_caller"
   gem 'rspec-rails', '~> 2.13.1'
   gem 'factory_girl_rails'
   gem "capybara"

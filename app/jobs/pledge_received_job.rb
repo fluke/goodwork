@@ -3,9 +3,8 @@ class PledgeReceivedJob
 
   # The perform method is in charge of our code execution when enqueued.
   def perform(ngo, donation)
-    AdminMailer.pledge_received(ngo, donation).deliver
-    NgoMailer.pledge_received(ngo, donation).deliver
-    UserMailer.user_pledge_confirmation(ngo, donation).deliver
+    AdminMailer.pledge_received(donation).deliver
+    UserMailer.user_pledge_confirmation(donation).deliver
   end
 
 end
