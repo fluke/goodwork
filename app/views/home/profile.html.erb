@@ -1,5 +1,14 @@
 <% title "#{@ngo.name}\'s Profile" %>
+<br/><br/><br/><br/>
+<div class="center-thing">
+<div class="one-black-bar"></div>
+<div class="mid-pic"><%= image_tag @ngo.avatar.url, :size => "240x240", :class => "round-pic" %></div>
+<div class="one-black-bar"></div>
+</div>
+<div class="clearer"></div>
+<div class="center-thing tal bal"><%= @ngo.name%><br/></div>
+<div class="center-thing tal six6"><%=@ngo.city%>, <%= @ngo.state%></div>
 
-<h1><%= @ngo.name%></h1>
-
-<%= image_tag @ngo.avatar.url(:thumb) %>
+<div class="center-thing-big">
+	<%=@ngo.longdesc%>
+	</div>

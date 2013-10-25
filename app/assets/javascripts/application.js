@@ -33,7 +33,6 @@ var do_on_load = function() {
 
 	var shifting = false;
 
-	console.log("Yo");
 
 	$('input[type="text"].pledge-input').on('keypress', function (event) {
 	    if(event.which == 13){
@@ -98,9 +97,23 @@ var do_on_load = function() {
 		}
 
 	});
+	$('#city').change(function () {
+	           $.get($("#gs").attr("action"), $("#gs").serialize(), null, "script");
+	          return false;
+	});
+
+          $('#search').keyup(function () {
+                   $.get($("#gs").attr("action"), $("#gs").serialize(), null, "script");
+                  return false;
+});
 
 
-}
+};
+
+        
+    
+
 
 $(document).ready(do_on_load);
 $(window).bind('page:change', do_on_load);
+
