@@ -1,9 +1,34 @@
-<% @donations.each do |d| %>
-	<% cat = Category.find(d.category).name %>
-	<div id="<%= d.id %>" class="col-lg-3 col-md-3 col-sm-3 card <%= cat.downcase %>">
-		<h3><%= d.name %></h3>
-		<p><%= d.full_name %></p>
-		<p><%= d.email %></p>
-		<p><%= cat %></p>
+
+<% @donations.each do |d| 
+	cat = Category.find(d.category).name %>
+
+	<div id="<%= d.id %>" class="col-lg-3 col-md-3 col-sm-6 <%= cat.downcase %>">
+
+		<%= link_to(donation_show_path(d.id)) do %>
+
+			<div class="pitch_canvas">
+				<div class="pitch_bg_img" style="background-image: url(http://crushpath.com/static/images-v2/pitch_shoes.jpg);">
+		      </div> 
+		      <div class="pitch_title">
+		      	<%= d.name %><br/>
+		      	<div class="address"><%= "#{d.address1} #{d.address2}, #{d.city}, #{d.state}"  %></div>
+		      </div> 
+		      <div class="pitch_type">
+		      <span class="pitch_cat" style="float:right;"><%= cat %></span>
+		      <%=  time_ago_in_words(d.created_at) %>
+		      </div>
+		      <div class="pitch_author">
+		          <div class="author_img">
+		          <img src="http://crushpath.com/static/images-v2/pitchauthor1.jpg" alt="Pledge Author Image">
+		          </div>
+		          <div class="author_text">
+		              <p class="author_name"><%= d.full_name %></p>
+		              <p><%= d.description %></p>
+		          </div>
+		      </div>
+			</div>
+
+		<% end %>
+
 	</div>
 <% end %>
