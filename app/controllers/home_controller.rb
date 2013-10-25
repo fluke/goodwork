@@ -17,9 +17,15 @@ class HomeController < ApplicationController
     
   end
 
-  
+  def directory
+    if params[:search]
+        @ngos = Ngo.search((params[:search]).to_s.downcase).city_search(params[:city].to_s.downcase)
+      else
+        @ngos = Ngo.all
+       end
+  end
   def profile
-    @ngo = Ngo.find(params[:id])
+    @ngo = Ngo.friendly.find(params[:id])
   end
   
   def myitems

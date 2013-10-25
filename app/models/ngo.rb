@@ -6,7 +6,9 @@ class Ngo < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   
   require 'approval_job'
-
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+  
   before_save :city_capitalize
   after_create :send_admin_mail
   
@@ -27,6 +29,20 @@ class Ngo < ActiveRecord::Base
   validates_length_of :shortdesc, :minimum => 6, :maximum => 141
   validates_associated :categories
 
+  def self.search(search)
+       if search
+         where('lower(name) LIKE ?', "%#{search}%")
+       else
+         scoped
+       end
+     end
+     def self.city_search(search)
+          if search
+            where('lower(city) LIKE ?', "%#{search}%")
+          else
+            scoped
+          end
+        end
 
 
   def city_capitalize
