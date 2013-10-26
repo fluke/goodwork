@@ -44,6 +44,7 @@ gem "paperclip"
 gem 'aws-sdk'
 gem 'newrelic_rpm'
 gem 'friendly_id'
+gem 'bullet'
 
 
 group :development, :test do
