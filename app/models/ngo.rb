@@ -12,7 +12,7 @@ class Ngo < ActiveRecord::Base
   before_save :city_capitalize
   after_create :send_admin_mail
   
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/missing.png"
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "135x135>" }, :default_url => "/assets/missing.png"
   
   validates_attachment :avatar,
     :content_type => { :content_type => ['image/jpeg', 'image/jpg', 'image/png'] },

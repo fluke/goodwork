@@ -1,17 +1,18 @@
-<br/><%if @ngos%>
-<h3>Displaying <%=@ngos.count%> NGOs in <%=request.location.city.capitalize%>, India</h3>
-<% #wont work in local%>
 <br/>
+<%if @ngos%>
+	<h3>Displaying <%=@ngos.count%> NGOs in <%=request.location.city.capitalize%>, India</h3>
+	<% #wont work in local %>
+	<br/>
 
-<%@ngos.each do |ngo|%>
-<div class="jumbotron container">
-<div class="pull-left">
-<%= link_to image_tag(ngo.avatar), profiles_path(ngo)%>
-</div>
-<div class="pull-left margin-left-extra">
-	<h3><%=ngo.name%></h3>
-	<%=ngo.shortdesc%>
-	</div>
-</div>
-<%end%>
+	<%@ngos.each do |ngo|%>
+		<div class="jumbotron container">
+			<div class="col-lg-2">
+				<%= link_to image_tag(ngo.avatar(:thumb)), profiles_path(ngo), class: 'profile-picture' %>
+			</div>
+			<div class="col-lg-10">
+				<h3><%=ngo.name%></h3>
+				<%=ngo.shortdesc%>
+			</div>
+		</div>
+	<%end%>
 <%end%>

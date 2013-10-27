@@ -1,14 +1,22 @@
 <% title "#{@ngo.name}\'s Profile" %>
-<br/><br/><br/><br/>
-<div class="center-thing">
-<div class="one-black-bar"></div>
-<div class="mid-pic"><%= image_tag @ngo.avatar.url, :size => "240x240", :class => "round-pic" %></div>
-<div class="one-black-bar"></div>
-</div>
-<div class="clearer"></div>
-<div class="center-thing tal bal"><%= @ngo.name%><br/></div>
-<div class="center-thing tal six6"><%=@ngo.city%>, <%= @ngo.state%></div>
 
-<div class="center-thing-big">
-	<%=@ngo.longdesc%>
+<br/><br/><br/><br/>
+<div class="row text-center">
+	<div class="center-thing">
+		<%= image_tag @ngo.avatar.url, :size => "260x260", :class => "round-pic" %>
 	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-10 col-lg-offset-1 text-center"><h1><%=@ngo.name%></h1><br/></div>
+</div>
+
+<div class="row">
+	<cite class="col-lg-6 col-lg-offset-3 text-center"><%=@ngo.city%>, <%= @ngo.state%></cite>
+</div>
+
+<br/><br/>
+
+<div class="col-lg-8 col-lg-offset-2">
+	<%=@ngo.longdesc%>
+</div>
