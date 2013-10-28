@@ -56,6 +56,7 @@ group :development, :test do
   gem "rack-livereload"
   gem "guard-rspec"
   gem "database_cleaner", :group => :test
+  gem 'quiet_assets'
   gem 'simplecov', :require => false, :group => :test
 end
 

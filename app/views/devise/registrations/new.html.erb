@@ -20,7 +20,7 @@
     <%= f.input :address1, :required => true %>
     <%= f.input :address2, :required => true %>
     <%= f.input :city, :required => true %>
-    <%= f.input :state, collection: Carmen::Country.coded('IN').subregions %>
+    <%= f.input :state, collection: Carmen::Country.coded('IN').subregions.flat_map(&:name) %>
     <%= f.association :categories, as: :check_boxes, label: 'What all does your organization accept?' %>
     
   </div>
