@@ -1,3 +1,6 @@
+// Core variables and mixins
+@import "../less/variables.less";
+@import "../less/mixins.less";
 
 .select-city {
 	background-color: #1abc9c;
@@ -8,9 +11,64 @@
 	}
 }
 
+.ngo_toggler {
+	h3 {
+		font-size: 24px;
+	}
+}
+
 .profile-picture > img {
 	width: 132px!important;
 	height: 132px!important;
 	border-radius: 50%;
 	border: 5px solid #1abc9c;
+}
+
+.form {
+	height:80px;
+}
+
+.container .jumbotron {
+	padding: 16px;
+	position: relative;
+	&:hover {
+		border: 2px solid #cdcdcd;
+		margin: -2px -2px 28px;
+		.view-profile {
+			right: 12px;
+		}
+	}
+}
+
+.jumbotron {
+	background-color: white;
+	padding: 16px;
+	font-family: @font-lato;
+	font-weight: 400;
+	p {
+		color: #9a9a9a;
+		font-size: 16px;
+		&.address-profile {
+			font-size: 18px;
+			color: @goodblue;
+		}
+	}
+	.ngo-title {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.map-marker {
+		width: 15px;
+		height: 18px;
+		display: block;
+		margin: 2px 4px -3px 0;
+		background-image: url('/assets/map-marker.png');
+	}
+}
+
+.view-profile {
+	position: absolute;
+	font-size: 10px;
+	bottom: 10px;
+	right: 16px;
 }

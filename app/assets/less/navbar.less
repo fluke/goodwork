@@ -7,6 +7,11 @@
 //
 // Provide a static navbar from which we expand to create full-width, fixed, and
 // other navbar variations.
+.atroot {
+  .navbar {
+    background-color: transparent;
+  }
+}
 
 .navbar {
   position: relative;
@@ -14,13 +19,14 @@
   min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   //margin-bottom: @navbar-margin-bottom;
   //border: 1px solid transparent;
+  background-color: #1f1f1f;
   font-family: @font-nav;
   font-size: 14px;
   // Prevent floats from breaking the navbar
   .clearfix();
 
   @media (min-width: @grid-float-breakpoint) {
-    border-radius: @navbar-border-radius;
+    //border-radius: @navbar-border-radius;
   }
 }
 
@@ -354,7 +360,7 @@
 
 // Default navbar
 .navbar-default {
-  background-color: rgba(0,0,0,0.1);//@navbar-default-bg;
+  background-color: #1f1f1f;//@navbar-default-bg;
   //border-color: @navbar-default-border;
 
   .navbar-brand {

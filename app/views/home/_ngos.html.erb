@@ -1,4 +1,4 @@
-<br/>
+
 <%if @ngos%>
 	<h3>Displaying <%=@ngos.count%> NGOs in <%=request.location.city.capitalize%>, India</h3>
 	<% #wont work in local %>
@@ -10,9 +10,13 @@
 				<%= link_to image_tag(ngo.avatar(:thumb)), profiles_path(ngo), class: 'profile-picture' %>
 			</div>
 			<div class="col-lg-10">
-				<h3><%=ngo.name%></h3>
-				<%=ngo.shortdesc%>
+				<h3 class="ngo-title"><%= ngo.name%></h3>
+				<p><%=ngo.shortdesc%></p>
+				<p class="address-profile">
+					<span class="pull-left map-marker"></span><%= ngo.full_address %>
+				</p>
 			</div>
+			<div class="view-profile">View profile</div>
 		</div>
 	<%end%>
 <%end%>

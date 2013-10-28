@@ -30,19 +30,24 @@ class Ngo < ActiveRecord::Base
   validates_associated :categories
 
   def self.search(search)
-       if search
-         where('lower(name) LIKE ?', "%#{search}%")
-       else
-         scoped
-       end
-     end
-     def self.city_search(search)
-          if search
-            where('lower(city) LIKE ?', "%#{search}%")
-          else
-            scoped
-          end
-        end
+    if search
+     where('lower(name) LIKE ?', "%#{search}%")
+    else
+     scoped
+    end
+  end
+
+  def self.city_search(search)
+    if search
+      where('lower(city) LIKE ?', "%#{search}%")
+    else
+      scoped
+    end
+  end
+
+  def full_address
+    "#{address1}, #{address2}, #{city}, #{state}"
+  end
 
 
   def city_capitalize
