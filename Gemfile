@@ -48,8 +48,6 @@ gem 'bullet'
 
 
 group :development, :test do
-  gem "better_errors"
-  gem "binding_of_caller"
   gem 'rspec-rails', '~> 2.13.1'
   gem 'factory_girl_rails'
   gem "capybara"
@@ -64,6 +62,9 @@ end
 gem 'carmen-rails', '~> 1.0.0', github: 'jim/carmen-rails'
 
 gem 'rails_12factor', group: :production
+
+gem 'yui-compressor', group: :production
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

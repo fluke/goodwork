@@ -8,15 +8,28 @@
 </div>
 
 <div class="row">
-	<div class="col-lg-10 col-lg-offset-1 text-center"><h1><%=@ngo.name%></h1><br/></div>
+	<div class="col-lg-10 col-lg-offset-1 text-center">
+		<h1><%=@ngo.name%></h1>
+		<br/>
+	</div>
 </div>
 
 <div class="row">
-	<cite class="col-lg-6 col-lg-offset-3 text-center"><%=@ngo.city%>, <%= @ngo.state%></cite>
+	<cite class="col-lg-6 col-lg-offset-3 text-center address">
+		<%=@ngo.full_address%>
+	</cite>
 </div>
 
 <br/><br/>
 
-<div class="col-lg-8 col-lg-offset-2">
-	<%=@ngo.longdesc%>
+<div class="col-lg-10 col-lg-offset-1">
+	<div class="jumbotron">
+		<%=@ngo.longdesc%>
+	</div>
+</div>
+
+<div class="col-lg-10 col-lg-offset-1">
+	<div class="jumbotron">
+		<%=@ngo.longdesc%>
+	</div>
 </div>

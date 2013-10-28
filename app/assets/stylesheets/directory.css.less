@@ -15,6 +15,18 @@
 	h3 {
 		font-size: 24px;
 	}
+
+	.container .jumbotron {
+		padding: 16px;
+		position: relative;
+		&:hover {
+			border: 2px solid #cdcdcd;
+			margin: -2px -2px 28px;
+			.view-profile {
+				right: 12px;
+			}
+		}
+	}
 }
 
 .profile-picture > img {
@@ -28,16 +40,13 @@
 	height:80px;
 }
 
-.container .jumbotron {
-	padding: 16px;
-	position: relative;
-	&:hover {
-		border: 2px solid #cdcdcd;
-		margin: -2px -2px 28px;
-		.view-profile {
-			right: 12px;
-		}
-	}
+.address() {
+	font-size: 18px;
+	color: @goodblue;
+}
+
+.address{
+	.address();
 }
 
 .jumbotron {
@@ -49,8 +58,7 @@
 		color: #9a9a9a;
 		font-size: 16px;
 		&.address-profile {
-			font-size: 18px;
-			color: @goodblue;
+			.address();
 		}
 	}
 	.ngo-title {
