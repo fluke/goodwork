@@ -4,11 +4,12 @@ class Ngo < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  
+  require 'carmen'
+  include Carmen
   require 'approval_job'
   extend FriendlyId
   friendly_id :name, use: :slugged
-  
+
   before_save :city_capitalize
   after_create :send_admin_mail
   
@@ -28,6 +29,8 @@ class Ngo < ActiveRecord::Base
   validates_presence_of :password, on: :create
   validates_length_of :shortdesc, :minimum => 6, :maximum => 141
   validates_associated :categories
+
+
 
   def self.search(search)
     if search
