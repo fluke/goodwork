@@ -21,6 +21,11 @@ var do_on_load = function() {
 
 	$(".alert").alert();
 
+	setTimeout(function() {
+	    // Do something every 2 seconds
+	    $(".alert").alert('close');
+	}, 10000);
+
 	$('input[type="checkbox"]').removeClass('form-control');
 
 	$('#donation_ph_no').parent().addClass('input-group');

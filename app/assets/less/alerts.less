@@ -12,6 +12,15 @@
   border: 1px solid transparent;
   border-radius: @alert-border-radius;
 
+  &.alert-fixed {
+    position: absolute;
+    top: 58px;
+    right: 10px;
+    z-index: 420;
+    font-family: @font-mont;
+    display: inline-block;
+  }
+
   // Headings for larger alerts
   h4 {
     margin-top: 0;
@@ -38,14 +47,13 @@
 // Expand the right padding and account for the close button's positioning.
 
 .alert-dismissable {
- padding-right: (@alert-padding + 20);
 
   // Adjust close link position
   .close {
     position: relative;
-    top: -2px;
-    right: -21px;
     color: inherit;
+    font-size: 100%;
+    float: none;
   }
 }
 

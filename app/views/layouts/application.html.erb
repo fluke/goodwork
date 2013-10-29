@@ -83,9 +83,21 @@
 			<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a></div>
 		<% end %>
 
+    <% else %>
+
+    	<% if flash[:notice] %>
+			<div class="alert alert-success alert-fixed alert-dismissable"><%= notice %>
+			<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a></div>
+		<% end %>
+		<% if flash[:alert] %>
+			<div class="alert alert-info alert-fixed alert-dismissable"><%= alert %>
+			<a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a></div>
+		<% end %>
+
     <% end %>
 
 		<%= yield %>
+
 	</div>
 
 	<footer>
