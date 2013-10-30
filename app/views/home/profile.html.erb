@@ -2,47 +2,57 @@
 
 <br/><br/><br/><br/>
 <div class="row text-center">
-	<div class="center-thing">
-		<%= image_tag @ngo.avatar.url, :size => "260x260", :class => "round-pic" %>
-	</div>
+        <div class="center-thing">
+                <%= image_tag @ngo.avatar.url, :size => "260x260", :class => "round-pic" %>
+        </div>
 </div>
 
 <div class="row">
-	<div class="col-lg-10 col-lg-offset-1 text-center"><h1><%=@ngo.name%></h1>
-		
-		<%if @ngo.approved%>
-		<div class="verified-button vb-extra">VERIFIED</div><br/>
-		<%end%>
-		</div>
+        <div class="col-lg-10 col-lg-offset-1 text-center"><h1><%=@ngo.name%></h1>
+                
+                <%if @ngo.approved%>
+                <div class="verified-button vb-extra">VERIFIED</div><br/>
+                <%end%>
+                </div>
 </div>
 
 <div class="row">
-	<cite class="col-lg-6 col-lg-offset-3 text-center address">
-		<%=@ngo.full_address%>
-	</cite>
+        <cite class="col-lg-6 col-lg-offset-3 text-center address">
+                <%=@ngo.full_address%>
+        </cite>
 </div>
+
+
 
 <br/><br/>
 
-<div class="col-lg-10 col-lg-offset-1">
-	<div class="jumbotron">
-		<%=@ngo.longdesc%>
-	</div>
+<div class="col-lg-12 jumbotron wt-bg">
+        <%=@ngo.longdesc%>
 </div>
 
 
-<div class="col-lg-12  wt-bg-2">
-	<span class="pull-left icon-phone"><%=@ngo.phone%></span><span class="pull-right icon-email"><%=@ngo.email%></span>
+<div class="col-lg-12 jumbotron wt-bg-2">
+        <span class="pull-left">
+        	<i class="glyphicon goodwork-phone"></i>
+        	<%=@ngo.phone%>
+        </span>
+        <span class="pull-right">
+        	<i class="glyphicon goodwork-email"></i>
+        	<%=@ngo.email%>
+        </span>
 
 </div>
 
 
-<div class="col-lg-12  wt-bg-2">
-	<div class="pull-left">Donations accepted.</div>
-	<div class="pull-right">
-		<% @ngo.categories.each do |x|%>
-		<div class="verified-button"><%= x.name%></div> &nbsp; &nbsp;
-		<%end%>
-		
-	</div>
+<div class="col-lg-12 jumbotron wt-bg-2">
+        <div class="pull-left">
+        	<i class="glyphicon goodwork-box"></i>
+        	Donations accepted.
+        </div>
+        <div class="pull-right">
+                <% @ngo.categories.each do |x|%>
+                <div class="verified-button"><%= x.name%></div> &nbsp; &nbsp;
+                <%end%>
+                
+        </div>
 </div>
