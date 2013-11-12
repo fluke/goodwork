@@ -1,0 +1,786 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"close",
+				"closeLeft"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"con",
+				"contentWidth"
+			],
+			[
+				"marg",
+				"marginLeft"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"has",
+				"hasClass	.hasClass"
+			],
+			[
+				"w",
+				"width	.width"
+			],
+			[
+				"cona",
+				"contact"
+			],
+			[
+				"sh",
+				"shifted"
+			],
+			[
+				"work",
+				"workarea"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"content",
+				"contentWidth"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"data",
+				"data-toggle"
+			],
+			[
+				"m",
+				"margin-bottom"
+			],
+			[
+				"get",
+				"getDocHeight"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"li",
+				"list-style"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"te",
+				"text-transform"
+			],
+			[
+				"group",
+				"group-member"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"p",
+				"phone_number"
+			],
+			[
+				"eng",
+				"engage_date"
+			],
+			[
+				"en",
+				"engage_time"
+			],
+			[
+				"enga",
+				"engage_date"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"form",
+				"form-control"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "@font-face\n{\nfont-family: 'int';\nsrc: url('int.ttf'); \n} \n#error_explanation ul li{font-size:14px;color:rgb(228, 111, 111);}\n.field_with_errors{}\n.center-text{\ntext-align: center;}\n\nh2{font-size:14px;color:#717171;text-shadow:0px 1px 0px white;text-align:center; }\nbody{margin:0; padding:0; background-color:#7a6d98;}\n.container{width:1030px; min-height:400px; margin:0 auto;}\n.footer{font-family:'int', sans-serif;width:900px;margin:0 auto;font-size:30px; text-align:center;\ncolor:white; text-shadow:1px 1px rgba(0,0,0,0.3); margin-top:25px; margin-bottom:15px;}\na{color:#717171; font-size:12px; font-family:'sans-serif'}\n.p,label{color:#717171;}\ninput[type = submit]{\n	-moz-box-shadow:inset 0px 1px 0px 0px #7a8eb9;\n        -webkit-box-shadow:inset 0px 1px 0px 0px #7a8eb9;\n        box-shadow:inset 0px 1px 0px 0px #7a8eb9;\n        cursor:pointer;\n        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #637aad), color-stop(1, #5972a7));\n        background:-moz-linear-gradient(top, #637aad 5%, #5972a7 100%);\n        background:-webkit-linear-gradient(top, #637aad 5%, #5972a7 100%);\n        background:-o-linear-gradient(top, #637aad 5%, #5972a7 100%);\n        background:-ms-linear-gradient(top, #637aad 5%, #5972a7 100%);\n        background:linear-gradient(to bottom, #637aad 5%, #5972a7 100%);\n        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#637aad', endColorstr='#5972a7',GradientType=0);\n        margin:15px auto 7px auto;\n        background-color:#637aad;\n        border:1px solid #314179;\n        \n        display:block;\n        color:#ffffff;\n        font-family:arial;\n        font-size:13px;\n        font-weight:bold;\n        padding:6px 12px;\n        text-decoration:none;\n        min-width:120px;\n        \n}\n.button-lef input[type = submit]{margin:0; margin-left:10px; }\n.flash{ border:1px solid rgb(255, 255, 152); width:300px; height:30px; background-color:rgb(233, 225, 130); margin:10px auto; color:rgb(129, 116, 76); text-align:center; line-height:30px;}\ninput[type = email], input[type = password]{width:289px;border:1px solid #bdbdbd;margin:3px 0px;padding-left:5px;margin-bottom:5px;}\n.devise_box{background-color:#dedae5; padding:10px; box-shadow:0px 2px 1px rgba(0,0,0,0.2); border-top:1px solid white; width:300px; margin:0 auto; }\n.title-h{font-family:'int', sans-serif;color:white; text-shadow:1px 1px rgba(0,0,0,0.5); font-size:60px; font-weight:normal; line-height:65px; margin-bottom:20px; text-align:center;}\n\n.button-3{ \n      \n    -moz-box-shadow:inset 0px 1px 0px 0px #a4ff70;\n        -webkit-box-shadow:inset 0px 1px 0px 0px #a4ff70;\n        box-shadow:inset 0px 1px 0px 0px #a4ff70;\n        \n        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #3db34b), color-stop(1, #31a63f));\n        background:-moz-linear-gradient(top, #3db34b 5%, #31a63f 100%);\n        background:-webkit-linear-gradient(top, #3db34b 5%, #31a63f 100%);\n        background:-o-linear-gradient(top, #3db34b 5%, #31a63f 100%);\n        background:-ms-linear-gradient(top, #3db34b 5%, #31a63f 100%);\n        background:linear-gradient(to bottom, #3db34b 5%, #31a63f 100%);\n        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3db34b', endColorstr='#31a63f',GradientType=0);\n        \n        background-color:#3db34b;\n        \n        border:1px solid #3a6621;\n        \n        display:block;\n        color:#fcfffc;\n        font-family:Arial;\n        font-size:12px;\n        font-weight:bold;\n        padding:6px 12px;\n        text-decoration:none;\n        float:];\n        margin-bottom:15px;\n        margin-right:auto;\n        width:73px;\n        z-index:2;\n        position:relative;\n        margin:0 auto;\n        \n        \n    }\n",
+			"file": "/home/kartikluke/scratch/app/assets/stylesheets/notes.css",
+			"file_size": 3746,
+			"file_write_time": 130285929583484827,
+			"settings":
+			{
+				"buffer_size": 3746,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/kartikluke/scratch/app/models/user.rb",
+			"settings":
+			{
+				"buffer_size": 321,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/kartikluke/scratch/app/views/notes/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 602,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/kartikluke/scratch/app/assets/stylesheets/note.css.scss",
+			"settings":
+			{
+				"buffer_size": 538,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 306.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"",
+				"Package Control: Remove Package"
+			],
+			[
+				"git pu",
+				"Git: Push"
+			],
+			[
+				"git ",
+				"Git: Push"
+			],
+			[
+				"git",
+				"Git: Push"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/kartikluke/goodwork/scratch.sublime-project",
+		"/home/kartikluke/scratch/app/views/devise/sessions/new.html.erb",
+		"/home/kartikluke/scratch/app/views/devise/registrations/new.html.erb",
+		"/home/kartikluke/scratch/app/views/layouts/application.html.erb",
+		"/home/kartikluke/scratch/app/views/devise/shared/_links.erb",
+		"/home/kartikluke/scratch/app/views/devise/passwords/new.html.erb",
+		"/home/kartikluke/scratch/app/assets/stylesheets/notes.css",
+		"/home/kartikluke/scratch/Gemfile",
+		"/home/kartikluke/scratch/config/routes.rb",
+		"/home/kartikluke/scratch/app/controllers/application_controller.rb",
+		"/home/kartikluke/scratch/app/models/user.rb",
+		"/home/kartikluke/scratch/app/controllers/notes_controller.rb",
+		"/home/kartikluke/scratch/app/models/note.rb",
+		"/home/kartikluke/scratch/config/database.yml",
+		"/home/kartikluke/scratch/README.rdoc",
+		"/home/kartikluke/scratch/app/views/notes/_form.html.erb",
+		"/home/kartikluke/goodwork/app/controllers/donation_controller.rb",
+		"/home/kartikluke/goodwork/app/views/donation/done.html.erb",
+		"/home/kartikluke/goodwork/app/jobs/pledge_received_job.rb",
+		"/home/kartikluke/goodwork/app/views/categories/index.html.erb",
+		"/home/kartikluke/goodwork/app/models/ngo.rb",
+		"/home/kartikluke/goodwork/app/controllers/admin_controller.rb",
+		"/home/kartikluke/goodwork/app/views/layouts/application.html.erb",
+		"/home/kartikluke/goodwork/app/assets/stylesheets/application.css.less",
+		"/home/kartikluke/goodwork/Gemfile",
+		"/home/kartikluke/goodwork/app/views/donation/_table.html.erb",
+		"/home/kartikluke/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/kartikluke/goodwork/app/views/admin/pending_donations.html.erb",
+		"/home/kartikluke/goodwork/config/initializers/simple_form_bootstrap.rb",
+		"/home/kartikluke/goodwork/app/views/donation/_form.html.erb",
+		"/home/kartikluke/goodwork/app/models/donation.rb",
+		"/home/kartikluke/goodwork/app/jobs/approval_job.rb",
+		"/home/kartikluke/goodwork/app/views/admin_mailer/new_ngo_waiting_for_approval.html.erb",
+		"/home/kartikluke/goodwork/config/initializers/setup_mail.rb",
+		"/home/kartikluke/goodwork/app/mailers/ngo_mailer.rb",
+		"/home/kartikluke/goodwork/app/mailers/user_mailer.rb",
+		"/home/kartikluke/goodwork/app/views/ngo_mailer/wait_for_approval.html.erb",
+		"/home/kartikluke/goodwork/app/mailers/admin_mailer.rb",
+		"/home/kartikluke/goodwork/app/views/donation/board.html.erb",
+		"/home/kartikluke/goodwork/config/routes.rb",
+		"/home/kartikluke/goodwork/app/controllers/home_controller.rb",
+		"/home/kartikluke/goodwork/app/helpers/application_helper.rb",
+		"/home/kartikluke/goodwork/app/jobs/ngo_approval_job.rb",
+		"/home/kartikluke/goodwork/app/jobs/pledge_received.rb",
+		"/home/kartikluke/.config/sublime-text-3/Packages/User/Git.sublime-settings",
+		"/home/kartikluke/.config/sublime-text-3/Packages/Git/Git.sublime-settings",
+		"/home/kartikluke/portfolio/README.md",
+		"/home/kartikluke/portfolio/src/js/sly.js",
+		"/home/kartikluke/goodwork/app/views/ngo_mailer/unapproved.html .erb",
+		"/home/kartikluke/goodwork/app/assets/less/navbar.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/navs.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/normalize.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/pager.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/pagination.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/panels.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/popovers.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/print.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/progress-bars.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/responsive-utilities.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/scaffolding.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/tables.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/theme.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/thumbnails.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/tooltip.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/type.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/utilities.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/variables.less",
+		"/home/kartikluke/goodwork/app/assets/less/wells.css.less",
+		"/home/kartikluke/goodwork/app/assets/stylesheets/bootstrap.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/alerts.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/badges.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/breadcrumbs.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/button-groups.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/buttons.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/carousel.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/close.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/code.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/component-animations.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/dropdowns.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/forms.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/glyphicons.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/grid.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/input-groups.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/jumbotron.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/labels.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/list-group.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/media.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/modals.css.less",
+		"/home/kartikluke/goodwork/Guardfile",
+		"/home/kartikluke/goodwork/app/views/categories/_form.html.erb",
+		"/home/kartikluke/goodwork/app/views/devise/confirmations/new.html.erb",
+		"/home/kartikluke/goodwork/config/environments/development.rb",
+		"/home/kartikluke/goodwork/app/assets/javascripts/application.js",
+		"/home/kartikluke/goodwork/app/views/admin/index.html.erb",
+		"/home/kartikluke/goodwork/app/views/admin/_logout.html.erb",
+		"/home/kartikluke/goodwork/db/schema.rb",
+		"/home/kartikluke/goodwork/app/views/ngo_mailer/pledge_received.html.erb",
+		"/home/kartikluke/goodwork/app/views/user_mailer/user_pledge_confirmation.html.erb",
+		"/home/kartikluke/goodwork/app/views/devise/sessions/new.html.erb",
+		"/home/kartikluke/goodwork/app/views/ngo_mailer/approved.html.erb",
+		"/home/kartikluke/goodwork/app/controllers/application_controller.rb",
+		"/home/kartikluke/goodwork/app/views/devise/registrations/new.html.erb",
+		"/home/kartikluke/goodwork/app/views/devise/passwords/edit.html.erb",
+		"/home/kartikluke/goodwork/app/views/devise/registrations/edit.html.erb",
+		"/home/kartikluke/goodwork/app/views/devise/passwords/new.html.erb",
+		"/home/kartikluke/goodwork/app/views/devise/unlocks/new.html.erb",
+		"/home/kartikluke/goodwork/app/assets/stylesheets/flat-ui.css.less",
+		"/home/kartikluke/goodwork/app/assets/less/icon-font.less",
+		"/home/kartikluke/goodwork/app/assets/javascripts/bootstrap-select.js",
+		"/home/kartikluke/goodwork/app/assets/javascripts/flatui-radio.js",
+		"/home/kartikluke/goodwork/app/assets/javascripts/flatui-checkbox.js",
+		"/home/kartikluke/goodwork/app/assets/less/modules/checkbox-and-radio.less",
+		"/home/kartikluke/totem/app/assets/less/alerts.less",
+		"/home/kartikluke/totem/app/assets/less/variables.less",
+		"/home/kartikluke/totem/app/assets/stylesheets/style.css",
+		"/home/kartikluke/totem/app/views/contacts/show.html.erb",
+		"/home/kartikluke/totem/app/views/engagements/show.html.erb",
+		"/home/kartikluke/totem/app/views/groups/show.html.erb",
+		"/home/kartikluke/totem/app/helpers/engagements_helper.rb",
+		"/home/kartikluke/totem/app/models/phone.rb",
+		"/home/kartikluke/totem/app/controllers/contacts_controller.rb",
+		"/home/kartikluke/totem/app/helpers/application_helper.rb",
+		"/home/kartikluke/totem/app/assets/javascripts/engagements.js.coffee",
+		"/home/kartikluke/totem/app/assets/stylesheets/application.css",
+		"/home/kartikluke/totem/app/views/engagements/_form.html.erb",
+		"/home/kartikluke/totem/README.rdoc",
+		"/home/kartikluke/totem/app/assets/less/forms.less",
+		"/home/kartikluke/totem/app/views/engagements/new.html.erb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 128.0,
+		"where_history":
+		[
+			"*.less",
+			"",
+			"*.css.less",
+			"",
+			"*.less",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"span",
+			"don",
+			"width",
+			"don",
+			".box-shadow",
+			", :required => true",
+			", label: false",
+			"include appl",
+			"@",
+			"model",
+			"wait_for_approval",
+			"@",
+			"pledge_rece",
+			"new_ngo",
+			"shifted",
+			"closeLeft",
+			"openLeft",
+			"$frame",
+			"$('.main')",
+			"class",
+			"section",
+			"$('#work')",
+			" \n",
+			".frame",
+			"@import \"theme.less\"",
+			"@import \"utilities.less\";",
+			".img-thumbnail",
+			"@import \"buttons.less\";",
+			".pull-left",
+			"@import \"variables.less\";\n@import \"mixins.less\";",
+			"@import \"../less/mixins.less\";",
+			"@import \"../less/variables.less\";",
+			".less",
+			"navbar-default",
+			"7777",
+			"self",
+			"AdminMailer",
+			">\n",
+			"true",
+			":html => { :method => :put, :class => ' ' }",
+			":html => { :method => :post, :class => ' ' }",
+			"html: {class: ' ' }",
+			"t \"",
+			"typeahea",
+			"../fonts/",
+			"selectpicker",
+			"checkbox",
+			"form-horizontal",
+			", class: 'form-control'",
+			"done",
+			"%;\n",
+			"container",
+			"cotainer",
+			"<%= notice %>",
+			"container spl",
+			"%>\n",
+			"form-control",
+			"has_many",
+			"state-success",
+			"\n@",
+			".less",
+			"../",
+			"icon-font-path",
+			"\"\n",
+			", :autofocus => true",
+			"<%= f.label  %>",
+			"class=\"field\"",
+			"\">\n",
+			"class=\"field\">",
+			"class=\"field\"",
+			"field",
+			"text_field",
+			"field",
+			"@import \"",
+			"form_for",
+			"<br/>"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$main",
+			"$frame",
+			"@import \"theme.less\";",
+			"@import \"utilities.less\";\n@import \"theme.less\"",
+			"@import \"buttons.less\";\n@import \"utilities.less\";",
+			"@import \"variables.less\";\n@import \"mixins.less\";\n@import \"type.less\";\n@import \"code.less\";\n@import \"grid.less\";\n@import \"tables.less\";\n@import \"forms.less\";\n@import \"buttons.less\";",
+			"@import \"mixins.less\";",
+			"@import \"variables.less\";",
+			":html => { :method => :put, :class => ' form-horizontal ' }",
+			":html => { :method => :post, :class => ' form-horizontal ' }",
+			"html: {class: ' form-horizontal ' }",
+			" ",
+			", input_html: { class: 'form-control' }"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/kartikluke/scratch/app/assets/stylesheets/notes.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3746,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3427,
+								3427
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 460.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/kartikluke/scratch/app/models/user.rb",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								321,
+								321
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/kartikluke/scratch/app/views/notes/index.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 602,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								49
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/kartikluke/scratch/app/assets/stylesheets/note.css.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 538,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								217,
+								217
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.git":
+	{
+		"height": 88.0
+	},
+	"project": "scratch.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"applic",
+				"app/assets/stylesheets/application.css.less"
+			],
+			[
+				"appl",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"scri",
+				"src/js/scripts.js"
+			],
+			[
+				"gru",
+				"Gruntfile.js"
+			],
+			[
+				"",
+				".jshintrc"
+			],
+			[
+				"var",
+				"app/assets/less/variables.less"
+			],
+			[
+				"type",
+				"app/assets/less/type.less"
+			],
+			[
+				"sc",
+				"db/schema.rb"
+			],
+			[
+				"ngo",
+				"app/models/ngo.rb"
+			],
+			[
+				"new",
+				"app/views/devise/registrations/new.html.erb"
+			],
+			[
+				"alert",
+				"app/assets/less/alerts.less"
+			],
+			[
+				"show",
+				"app/views/groups/show.html.erb"
+			],
+			[
+				"appli",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"schema",
+				"db/schema.rb"
+			],
+			[
+				"scaff",
+				"app/assets/stylesheets/scaffolds.css.scss"
+			],
+			[
+				"nav",
+				"app/assets/less/navbar.less"
+			],
+			[
+				"va",
+				"app/assets/less/variables.less"
+			],
+			[
+				"dat",
+				"config/database.yml"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/goodwork.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 226.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
