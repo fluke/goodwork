@@ -2,9 +2,16 @@
 @import "../less/variables.less";
 @import "../less/mixins.less";
 
+* {
+	text-decoration: none!important;
+}
+
+.imalink {
+	display: block;
+}
 
 .pitch_canvas {
-	height:392px; 
+	height:375px; 
 	margin-top: 20px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -13,9 +20,15 @@
   	-webkit-box-shadow: 0px 0px 6px #666;
   	box-shadow:         0px 0px 6px #666;
 	background-color:#eee;
+	text-decoration: none;
+	&:hover {
+		-moz-box-shadow:    0px 0px 20px #666;
+  		-webkit-box-shadow: 0px 0px 20px #666;
+  		box-shadow:         0px 0px 20px #666;
+	}
 }
 .pitch_bg_img {
-	height:180px;
+	height:135px;
 	overflow:hidden;
 	background-color:#999;
 	-webkit-border-top-left-radius: 5px;
@@ -24,6 +37,16 @@
 	-moz-border-radius-topright: 5px;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
+	&.akshats {
+		background-color: #333;
+	}
+	h3 {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 165%;
+		margin-top: 50px;
+		color: #fff;
+	}
 }
 
 .pitch_title {

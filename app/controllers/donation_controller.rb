@@ -2,7 +2,7 @@ class DonationController < ApplicationController
   
   def new
      @donation = Donation.new
-     @donation.state = Carmen::Country.coded('IN').subregions.first
+     @donation.state = Carmen::Country.coded('IN').subregions.flat_map(&:name).first
   end
    
   def create

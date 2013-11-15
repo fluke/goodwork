@@ -30,7 +30,7 @@
   
   <div class="form-group">
     <%= f.input :city, placeholder: 'City', size_html: { class: 'col-sm-6 col-lg-6 col-md-6'} %>
-    <%= f.input :state, collection: Carmen::Country.coded('IN').subregions, size_html: { class: 'col-sm-6 col-lg-6 col-md-6'} %>
+    <%= f.input :state, collection: Carmen::Country.coded('IN').subregions.flat_map(&:name), size_html: { class: 'col-sm-6 col-lg-6 col-md-6'} %>
   </div>
   <div class="form-group">
     <%= f.input :ph_no, placeholder: 'Phone', size_html: { class: 'col-sm-6 col-lg-6 col-md-6'} %>
