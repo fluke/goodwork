@@ -1,2 +1,36 @@
 <% title "#{@d.name} pledged by #{@d.full_name}" %>
 <h1><%= yield :title %></h1>
+
+<% cat = Category.find(@d.category).name %>
+
+<div class="pitch_canvas">
+	<div class="pitch_bg_img <%= cat.downcase %>">
+		<h3><%= cat.upcase %></h3>
+	</div>
+<div class="pitch_title">
+  	<%= @d.name %><br/>
+<div class="address"><%= "#{@d.address1} #{@d.address2}, #{@d.city}, #{@d.state}"  %></div>
+</div> 
+   <div class="pitch_type">
+   <span class="pitch_cat" style="float:right;"><%= cat %></span>
+   <%=  time_ago_in_words(@d.created_at) %>
+  </div>
+  <div class="pitch_author">
+      <div class="author_text">
+          <p class="author_name"><%= @d.full_name %></p>
+          <p><%= @d.description %></p>
+      </div>
+  </div>
+</div>
+
+<h2>Add a comment:</h2>
+<%= form_for([@donation, comments.build]) do |f| %>
+
+  <p>
+    <%= f.label :data %><br />
+    <%= f.text_area :data %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

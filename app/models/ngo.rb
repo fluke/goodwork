@@ -4,23 +4,26 @@ class Ngo < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  # Using Carmen to get states
   require 'carmen'
   include Carmen
+
+  # Requiring approval_job which includes Sucker Punch for asyncronously sending mail
   require 'approval_job'
+ 
+  # Using friendly ids for more rememberable ids
   extend FriendlyId
   friendly_id :name, use: :slugged
+
 
   before_save :city_capitalize
   after_create :send_admin_mail
   
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "135x135>" }, :default_url => "/assets/missing.png"
-  
-  validates_attachment :avatar,
-    :content_type => { :content_type => ['image/jpeg', 'image/jpg', 'image/png'] },
-    :size => { :in => 0..2000.kilobytes }
-
   has_and_belongs_to_many :categories, :join_table => 'ngos_categories'
-  
+  has_many :comments
+
   validates_presence_of :name, :shortdesc, :email, :city, :state, :address2, :address1, :phone
   validates_uniqueness_of :name
   validates_length_of :name, :minimum => 3, :maximum => 100
@@ -29,6 +32,9 @@ class Ngo < ActiveRecord::Base
   validates_presence_of :password, on: :create
   validates_length_of :shortdesc, :minimum => 6, :maximum => 141
   validates_associated :categories
+  validates_attachment :avatar,
+    :content_type => { :content_type => ['image/jpeg', 'image/jpg', 'image/png'] },
+    :size => { :in => 0..2000.kilobytes }
 
 
 
