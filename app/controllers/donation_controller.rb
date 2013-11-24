@@ -1,9 +1,12 @@
 class DonationController < ApplicationController
+  before_action :authenticate_ngo!, only: [:comments, :board]
   
   def new
      @donation = Donation.new
      @donation.state = Carmen::Country.coded('IN').subregions.flat_map(&:name).first
   end
+
+
    
   def create
     @donation = Donation.new(donation_params)
@@ -27,13 +30,32 @@ class DonationController < ApplicationController
   end
 
   def board
-    #authenticate_ngo!
     @donations = Donation.order('id DESC')
   end
+
+  def comments
+    Comment.create(:data => params[:comments][:data], :donation_id => params[:id], :ngo_id => current_ngo.id, selected: "false")
+    redirect_to request.referer
+  end
      
-  require 'pledge_received_job'
+  def select
+    @comment = Comment.find_by_id(params[:id])
+    @comment.selected = true
+    @comment.save!
+    redirect_to request.referer
+  end
+
+  def deselect
+    @comment = Comment.find_by_id(params[:id])
+    @comment.selected = false
+    @comment.save!
+    redirect_to request.referer
+  end
+  
      
 private
+
+  require 'pledge_received_job'
 
   def donation_params
     params.require(:donation).permit(:name, :address1, :address2, :city, :state, :category, :email, :description, :full_name, :ph_no)
@@ -42,7 +64,10 @@ private
   def send_mail(donation)
     # We call our sucker punch job asynchronously using "async"
       ::PledgeReceivedJob.new.async.perform(donation)
-      flash[:success] = 'Sucker Punch!'
   end
+
+  
+  
+    
 
 end

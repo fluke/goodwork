@@ -23,14 +23,7 @@
   </div>
 </div>
 
-<h2>Add a comment:</h2>
-<%= form_for([@donation, comments.build]) do |f| %>
+<br>
+<br>
 
-  <p>
-    <%= f.label :data %><br />
-    <%= f.text_area :data %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<%= render 'comments' %>

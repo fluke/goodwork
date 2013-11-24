@@ -58,6 +58,7 @@ group :development, :test do
   gem "database_cleaner", :group => :test
   gem 'quiet_assets'
   gem 'simplecov', :require => false, :group => :test
+  gem 'brakeman', :require => false
 end
 
 gem 'carmen-rails', '~> 1.0.0', github: 'jim/carmen-rails'

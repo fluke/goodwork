@@ -14,6 +14,9 @@ Goodwork::Application.routes.draw do
   get "donation/done" => "donation#done"
   get "donation/board" => "donation#board"
   get "donation/show/:id" => "donation#show", as: 'donation_show'
+  get "donation/select/:id" => "donation#select", as: 'donation_select'
+  get "donation/deselect/:id" => "donation#deselect", as: 'donation_deselect'
+  post 'donation/show/:id/comments' => 'donation#comments', as: "donation_comments"
   
   #Admin routes
   get "admin/index" => "admin#index"

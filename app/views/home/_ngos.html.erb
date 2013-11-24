@@ -5,7 +5,7 @@
 	<br/>
 
 	<%@ngos.each do |ngo|%>
-		<%= link_to(profiles_path(ngo.id), class:"imalink") do %>
+		<%= link_to(profiles_path(ngo), class:"imalink") do %>
 			<div class="jumbotron container">
 				<div class="col-lg-2">
 					<%= image_tag(ngo.avatar(:thumb), class: 'profile-picture') %>

@@ -1,0 +1,33 @@
+
+<% if ngo_signed_in? %>
+
+  <% if current_ngo.approved %>
+
+    <%= simple_form_for :comments, { url: donation_comments_path,:method => 'post', wrapper: :home } do |f| %>
+      <%= f.input :data, as: :text, placeholder: "Leave a request" %>
+      <%= f.button :submit, "Submit", class: "send-request" %>
+    <% end %>
+
+  <% end %>
+
+  <br>
+  <h3>Requests</h3>
+
+
+    <% @d.comments.each do |comment| %>
+    	<div class="comment <%= 'selected' if comment.selected %>">
+      		<%= comment.data %>
+      	</div>
+      	<div class="comment-highlight">
+      		Request made by: <%= link_to "#{comment.ngo.name}", profiles_path(comment.ngo) %> <br>
+          Is selected: <%= comment.selected %>
+          <div class="comment-action">
+            <%= link_to "Select", donation_select_path(comment.id) %>
+            <%= link_to "Deselect", donation_deselect_path(comment.id) %>
+          </div>
+      	</div>
+    <% end %>
+
+  
+
+<% end %>
